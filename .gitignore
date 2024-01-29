@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# General
+*/config/development
+*/config/testing
+*/config/production
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+application/vendor
+uploads
+uploads-old
+
+dist
+node_modules
+*/node_modules
+
+\.vscode/
+\*.sql
+
+sql\.txt
+
+tasks\.txt

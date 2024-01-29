@@ -1,0 +1,7 @@
+.modal-child {
+    z-index: 1052 !important;
+}
+
+.modal-backdrop.show:nth-of-type(2) {
+    z-index: 1051 !important;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "k99-libs",
+  "version": "1.0.0",
+  "description": "JS Libraries fro k99 cms",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cms",
+    "libs"
+  ],
+  "author": "Komunigrafik",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "cropperjs": "^1.5.11"
+  }
+}

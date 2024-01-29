@@ -1,0 +1,251 @@
+html {
+    background-color: transparent;
+}
+
+body {
+    /*background-color: #f7f7f7;*/
+  /*background:  #f3f3f3;*/ /* For browsers that do not support gradients */ 
+  /*background: linear-gradient(#fafbfb, #f3f3f3);*/ /* Standard syntax */
+}
+
+.authenthication-bg {
+    /*background: blue no-repeat top center url('k99bg.jpg');*/
+    background-size: cover;
+}
+
+.backend-page-nav {
+    height: 70px; display: flex; align-items: center;
+}
+
+.backend-page-nav .btn {
+    color: #CFCFCF;
+    font-size: .800rem;
+    padding: .275rem .75rem;
+}
+
+.backend-page-nav .btn:hover {
+    color: #EEE;
+}
+
+.backend-page-nav .btn:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.card-box {  
+  box-shadow: 0 0px 8px 0 #f3f3f3, 0 1px 0px 0 #f3f3f3;
+}
+
+#topnav {
+    position: relative;
+}
+
+.wrapper {
+    padding-top: 0;
+}
+
+#topnav .navigation-menu {
+    margin-top: 15px;
+}
+
+#topnav .navigation-menu > li > a {
+    font-size: 12px;
+    padding: 0;
+    margin: 0px 7px 15px 0;
+}
+
+#topnav .navigation-menu > li:not(:last-child) > a {
+    padding-right: 7px;
+    border-right: #ddd 1px solid;
+}
+
+#topnav .navigation-menu > li.has-submenu:hover > .submenu > li.has-submenu:hover > .submenu > li.has-submenu:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-inline .form-check {
+    display: inline-block;
+}
+
+.media-row {
+    padding: 10px 0;
+}
+
+.media-row .media-card {
+    cursor: pointer;
+}
+
+.media-row .media-card .card-footer {
+    font-size: 10px;
+    padding: .5rem;
+}
+
+.card-link + .card-link {
+    margin: 0;
+}
+
+.card-header .card-title {
+    margin: 0;
+}
+
+@media (min-width: 900px) {
+    .navbar-default {
+        background: transparent;
+        display: none;
+    }
+    .topbar {
+        width: 250px;
+    }
+}
+
+.big-icon {
+    font-size: 40px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    display: block;
+}
+
+.text-danger {
+    color: #ff0c0c;
+}
+
+.text-danger-muted {
+    color: #feb9b9;
+}
+
+.progress-bar-muted {
+    background-color: #d3d3d3;
+}
+
+.content-page .content {
+    margin-top: 15px;
+}
+
+.header-in-page {
+    padding-top: 20px;
+}
+
+#sidebar-menu > ul > li > a.active {
+    /* border-left: 3px solid #ff5b5b; */
+    border-left: 3px solid #71b6f9;
+    /* color: #ff5b5b !important; */
+    color: #71b6f9 !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #2f3239 !important;
+    border-color: #2f3239 !important;
+}
+
+.logo-container {
+    margin-top: 30px;
+    display: block;
+    background-color: #ffffff;
+}
+
+.logo-link {
+    display:block;
+    margin-bottom: 20px;
+}
+
+.side-menu {
+    padding-top: 0px;
+}
+
+.active-module {
+    font-size: 28px;
+    margin-right: 5px;    
+}
+
+.menu-module {
+    margin-top: 90px;
+    margin-left: 30px;
+}
+
+.button-active-module {
+    font-size: 20px;
+}
+
+.topbar .topbar-left {
+    border-top: none;/* 3px solid #ff5b5b;*/
+}
+
+.topbar-left h3 {
+    text-align: left;
+    padding-left: 25px;
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+
+.tombol-ganti-modul {
+    height: 25px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+
+/* RECRUITMENT DETAIL */
+
+.widget-detail-number {
+    display: inline-block;
+    padding-left: 25px;
+}
+
+.widget-detail-number .text-muted {
+    line-height: 1.3;
+    margin-bottom: 0px;
+}
+
+#table-list-applicant a:link, #table-list-applicant a:hover, #table-list-applicant a:visited {
+    color: #505458;
+}
+
+/* OPENING */
+#opening-card {
+    min-height: 600px;
+}
+
+.simple-steps {
+    min-height: 300px;
+}
+
+.body-galeri .thumbnail {
+    height: 325px;
+}
+
+    .body-galeri .thumbnail h3 {
+        font-size: 20px;
+        margin: 0 0 5px 0;
+    }
+
+    .body-galeri .row-galeri_foto .thumbnail {
+        height: unset;
+    }
+
+.header-galeri_foto {
+    padding: 10px 15px 15px;
+    text-align: center;
+    margin: 0 auto 25px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+}
+
+.header-galeri_foto small {
+    margin: 0;
+    font-size: 12px;
+}
+
+.header-galeri_foto h3 {
+    margin: 0;
+    font-size: 33px;
+    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-weight: bold;
+    color: #333;
+}
