@@ -4,28 +4,42 @@
 			<div class="tab-content">
 				<div class="tab-pane active" id="mt-eng">
 					<div class="form-group">
-						<label for="title">Title</label>
-						<textarea name="title" id="title" cols="30" rows="3" class="editor form-control <?=error_class('title')?>"><?=set_row_value('title',$row)?></textarea>
-						<?=error_block('title')?>
-					</div>
-					<div class="form-group">
 						<label for="subtitle">Description</label>
 						<textarea name="subtitle" id="subtitle" cols="30" rows="3" class="form-control <?=error_class('subtitle')?>"><?=set_row_value('subtitle',$row)?></textarea>
 						<?=error_block('subtitle')?>
 					</div>
+					<div class="form-group">
+						<label for="title">Title</label>
+						<textarea name="title" id="title" cols="30" rows="3" class="editor form-control <?=error_class('title')?>"><?=set_row_value('title',$row)?></textarea>
+						<?=error_block('title')?>
+					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="button_label">Button Label (Optional)</label>
-								<input type="text" class="form-control <?=error_class('button_label')?>" name="button_label" value="<?=set_row_value('button_label',$row)?>" />
-								<?=error_block('button_label')?>
+								<label for="button_label_left">Button Label Left (Optional)</label>
+								<input type="text" class="form-control <?=error_class('button_label_left')?>" name="button_label_left" value="<?=set_row_value('button_label_left',$row)?>" />
+								<?=error_block('button_label_left')?>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="url">Button URL (Optional)</label>
-								<input type="text" class="form-control <?=error_class('url')?>" name="url" value="<?=set_row_value('url',$row)?>" />
-								<?=error_block('url')?>
+								<label for="button_label_right">Button Label Right (Optional)</label>
+								<input type="text" class="form-control <?=error_class('button_label_right')?>" name="button_label_right" value="<?=set_row_value('button_label_right',$row)?>" />
+								<?=error_block('button_label_right')?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="url_left">Button URL Left (Optional)</label>
+								<input type="text" class="form-control <?=error_class('url_left')?>" name="url_left" value="<?=set_row_value('url_left',$row)?>" />
+								<?=error_block('url_left')?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="url_right">Button URL Right (Optional)</label>
+								<input type="text" class="form-control <?=error_class('url_right')?>" name="url_right" value="<?=set_row_value('url_right',$row)?>" />
+								<?=error_block('url_right')?>
 							</div>
 						</div>
 					</div>
@@ -44,16 +58,30 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="ind_button_label">Button Label (Optional)</label>
-								<input type="text" class="form-control <?=error_class('ind_button_label')?>" name="ind_button_label" value="<?=set_row_value('ind_button_label',$row)?>" />
-								<?=error_block('ind_button_label')?>
+								<label for="ind_button_label_left">Button Label Left (Optional)</label>
+								<input type="text" class="form-control <?=error_class('ind_button_label_left')?>" name="ind_button_label_left" value="<?=set_row_value('ind_button_label_left',$row)?>" />
+								<?=error_block('ind_button_label_left')?>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="ind_url">Button URL (Optional)</label>
-								<input type="text" class="form-control <?=error_class('ind_url')?>" name="ind_url" value="<?=set_row_value('ind_url',$row)?>" />
-								<?=error_block('ind_url')?>
+								<label for="ind_button_label_right">Button Label Right (Optional)</label>
+								<input type="text" class="form-control <?=error_class('ind_button_label_right')?>" name="ind_button_label_right" value="<?=set_row_value('ind_button_label_right',$row)?>" />
+								<?=error_block('ind_button_label_right')?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="ind_url_left">Button URL Left (Optional)</label>
+								<input type="text" class="form-control <?=error_class('ind_url_left')?>" name="ind_url_left" value="<?=set_row_value('ind_url_left',$row)?>" />
+								<?=error_block('ind_url_left')?>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="ind_url_right">Button URL Right (Optional)</label>
+								<input type="text" class="form-control <?=error_class('ind_url_right')?>" name="ind_url_right" value="<?=set_row_value('ind_url_right',$row)?>" />
+								<?=error_block('ind_url_right')?>
 							</div>
 						</div>
 					</div>
@@ -64,7 +92,7 @@
 				
 			<div class="form-group">
 				<label for="file">Image Background</label><br>
-				<small>recommended image size is 2900x1500 pixels</small>
+				<small>recommended image size is 1920x1080 pixels</small>
 				<img width="250" src="<?=img_url($row['image'], 'slides')?>">
 				<?=html_upload($row['image'],'image','slides');?>
 			</div>					

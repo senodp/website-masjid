@@ -3,9 +3,9 @@
 		<div class="row">
 			<div class="col">
 				<h3 class="m-0 mb-1">Slides</h3><small><i>Click and drag items to change order</i></small>
-			</div>
+			</div> 
 			<div class="col text-right">
-				<!-- <a href="<?=$Page_url?>/new-slide" class="btn-ajax btn-sm btn-rounded btn-dark"><?=mdi('plus')?> New Slide</a> -->
+				<a href="<?=$Page_url?>/new-slide" class="btn-ajax btn-sm btn-rounded btn-primary"><?=mdi('plus')?> New Slide</a>
 			</div>
 		</div>
 	</div>

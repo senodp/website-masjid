@@ -1,7 +1,7 @@
 <?php
 
 trait SlideCrud {
-	var $slide_lang = array('title', 'subtitle', 'url', 'button_label');
+	var $slide_lang = array('title', 'subtitle', 'url_left', 'url_right', 'button_label_left', 'button_label_right');
 
 	function prep_slide(){
 		Common_form_init('slides');
@@ -10,10 +10,12 @@ trait SlideCrud {
 		Common_form_set('image', 'File', 'file');
 		Common_form_set_lang('title', 'Title', 'not_required');
 		Common_form_set_lang('subtitle', 'Sub Title', 'not_required');
-		Common_form_set_lang('button_label', 'Button Label (optional)', 'not_required');
-		Common_form_set_lang('url', 'Button URL (optional)', 'not_required');
+		Common_form_set_lang('button_label_left', 'Button Label (optional)', 'not_required');
+		Common_form_set_lang('url_left', 'Button URL (optional)', 'not_required');
+		Common_form_set_lang('button_label_right', 'Button Label (optional)', 'not_required');
+		Common_form_set_lang('url_right', 'Button URL (optional)', 'not_required');
 		//Common_form_set('warna', 'Select Warna', 'required');
-		Common_form_set('position', 'Select Posisi', 'not_required');
+		//Common_form_set('position', 'Select Posisi', 'not_required');
 		//Common_form_set('font_type', 'Font Type', 'not_required');
 		//Common_form_set('font_size', 'Font Size', 'not_required');
 		Common_form_set('is_publish', 'Publish', 'not_required');
