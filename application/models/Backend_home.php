@@ -13,7 +13,7 @@ class Backend_home extends CI_Model {
 
 	use FooterCrud, HighlightCrud, SlideCrud;
 
-	var $services_lang = array('title', 'subtitle', 'content');
+	var $program_lang = array('title', 'subtitle', 'content');
 	var $testimonial_lang = array('title', 'position', 'content');
 	var $logo_lang = array('title', 'subtitle');
 
@@ -30,9 +30,10 @@ class Backend_home extends CI_Model {
 		$data['slides'] = $slides;
 
 		$this->db->order_by('sorting', 'asc');
-		$services = db_entries('services');
-		$data['services'] = $services;
+		$program = db_entries('program');
+		$data['program'] = $program;
 
+		$this->db->limit(3);
 		$this->db->order_by('sorting', 'ASC');
 		$this->db->select('listpages.*');
 		$this->db->join('listpages', 'featured_showcase.id_listpages = listpages.id', 'left');
@@ -96,9 +97,7 @@ class Backend_home extends CI_Model {
 			'about_title',
 			'about_description',
 			'about_text_profile',
-			'about_text_ourteam',
 			'about_text_profile_url',
-			'about_text_ourteam_url',
 			'about_image'
 		];
 
@@ -106,10 +105,8 @@ class Backend_home extends CI_Model {
 			[null, 'not_required'],
 			[null, 'not_required'],
 			[null, 'not_required'],
-			[null, 'not_required'],
 			[null, 'not_required|valid_url'],
-			[null, 'not_required|valid_url'],
-			[null, 'image|960x1080']
+			[null, 'image|800x800']
 		];
 
 		options_save($sectionabout_names, $sectionabout_options, true);
@@ -119,88 +116,66 @@ class Backend_home extends CI_Model {
 
 	// --- Section About End --- //
 
-	//========================================================================================================//
+	//===========================================================//
 
-	// --- Section Services --- //
-
-	function _edit_backgroundservices_save(){
-		$backgroundservices_names = [
-			'backgroundservices_image'
+	function _edit_overviewprogramkegiatan_save(){
+		$overview_program_kegiatan_names = [
+			'overview_program_kegiatan'
 		];
-		$backgroundservices_options = [
-			[null, 'image|1412x1445']
-		];
-		options_save($backgroundservices_names, $backgroundservices_options, true);
-
-		die('success');
-	}
-
-	function _backgroundservices(){
-		options_save($this->backgroundservices_names, $this->backgroundservices_options, true);
-
-		die('success');
-	}
-
-	// ------------------------ //
-
-	function _edit_titleservices_save(){
-		$titleservices_names = [
-			'title_services'
-		];
-		$titleservices_options = [
+		$overview_program_kegiatan_options = [
 			[null, null]
 		];
-		options_save($titleservices_names, $titleservices_options, true);
+		options_save($overview_program_kegiatan_names, $overview_program_kegiatan_options, true);
 
 		die('success');
 	}
 
-	function _titleservices(){
-		options_save($this->titleservices_names, $this->titleservices_options, true);
+	function _overview_program_kegiatan(){
+		options_save($this->overview_program_kegiatan_names, $this->overview_program_kegiatan_options, true);
 
 		die('success');
 	}
 
-	// ------------------------ //
+	// --- Section Program Start --- //
 
-	function prep_services(){
-		Common_form_init('services');
+	function prep_program(){
+		Common_form_init('program');
 		
-		Common_form_set('image', 'Image', 'image|600x600');
+		//Common_form_set('image', 'Image', 'image|600x600');
 		//Common_form_set('icon', 'Image', 'image|64x60');
 		Common_form_set_lang('title', 'Title', 'not_required');
 		Common_form_set_lang('subtitle', 'Sub Title', 'not_required');
-		Common_form_set('url', 'Button URL (optional)', 'not_required');
+		// Common_form_set('url', 'Button URL (optional)', 'not_required');
 		Common_form_set('link', 'Link', 'not_required');
 		Common_form_set_lang('content', 'Content', 'not_required');
 		// Common_form_set('url', 'Button URL (optional)', 'url_title_lowercase');
 		Common_form_set('is_publish', 'Select Status', 'not_required');
 	}
 
-	function _services_sorter(){
+	function _program_sorter(){
 		$sorted = form_post('sorted');
 		$sorted = explode(',', $sorted);
 
 		foreach ($sorted as $index => $id){
 			$data['sorting'] = $index;
 			$this->db->where('id', $id);
-			$this->db->update('services', $data);
+			$this->db->update('program', $data);
 		}
 
 		die('success');
 	}
 
-	function _new_services($id_parent = 0){
-		$data = array('subtitle' => 'New Services', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'services_new_services');
+	function _new_program($id_parent = 0){
+		$data = array('subtitle' => 'New Program', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'program_new_program');
 
-		$row = db_insert_fill('services', array(), $this->services_lang);
+		$row = db_insert_fill('program', array(), $this->program_lang);
 		$data['row'] = $row;// dd($row);
 
 		return $data;
 	}
 
-	function _new_services_save(){
-		$this->prep_services();
+	function _new_program_save(){
+		$this->prep_program();
 
 		$title = form_post('title');
 		$url = form_post('url');
@@ -216,17 +191,17 @@ class Backend_home extends CI_Model {
 		}
 	}
 
-	function _edit_services($id){
-		$data = array('subtitle' => 'Edit Services', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'services_new_services');
+	function _edit_program($id){
+		$data = array('subtitle' => 'Edit Program', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'program_new_program');
 
-		$row = db_entry('services', $id, null, $this->services_lang);
+		$row = db_entry('program', $id, null, $this->program_lang);
 		$data['row'] = $row;
 
 		return $data;
 	}
 
-	function _edit_services_save($id){
-		$this->prep_services();
+	function _edit_program_save($id){
+		$this->prep_program();
 
 		$title = form_post('title');
 		$url = form_post('url');
@@ -244,54 +219,52 @@ class Backend_home extends CI_Model {
 		}
 	}
 
-	function _remove_services($id){
+	function _remove_program($id){
 		$data = [
-			'subtitle' => 'Hapus Services',
+			'subtitle' => 'Hapus Program',
 			'view' => '_remove'
 		];
 
 		return $data;
 	}
 
-	function _remove_services_save($id){
-		db_remove('services', $id);
+	function _remove_program_save($id){
+		db_remove('program', $id);
 	}
 
-	// --- Section Services End --- //
+	// --- Section Program End --- //
 
-	//========================================================================================================//
+	//============================================================//
 
-	// --- Section Showcase --- //
+	// --- Section Artikel --- //
 
-	function _sectionshowcase(){
+	function _sectionartikel(){
 
-		options_save($this->sectionshowcase_names, $this->sectionshowcase_options, true);
+		options_save($this->sectionartikel_names, $this->sectionartikel_options, true);
 		die('success');
 	}
 
-	function _edit_sectionshowcase_save(){
+	function _edit_sectionartikel_save(){
 
-		$sectionshowcase_names = [
-			'sectionshowcase_title',
-			'sectionshowcase_description',
-			'sectionshowcase_label_button',
-			'sectionshowcase_url',
+		$sectionartikel_names = [
+			'sectionartikel_title',
+			// 'sectionartikel_label_button',
+			// 'sectionartikel_url',
 		];
 
-		$sectionshowcase_options = [
+		$sectionartikel_options = [
 			[null, 'required'],
-			[null, 'required'],
-			[null, 'required'],
-			[null, 'required|valid_url']
+			// [null, 'required'],
+			// [null, 'required|valid_url']
 		];
 
-		options_save($sectionshowcase_names, $sectionshowcase_options, true);
+		options_save($sectionartikel_names, $sectionartikel_options, true);
 		die('success');
 	}
 
 	// ------------------------ //
 
-	function prep_featuredshowcase(){
+	function prep_featuredartikel(){
 
 		Common_form_init('featured_showcase');
 
@@ -300,7 +273,7 @@ class Backend_home extends CI_Model {
 		//Common_form_set('sort', 'Sort', 'required');
 	}
 
-	function _featuredshowcase_sorter(){
+	function _featuredartikel_sorter(){
 		$sorted = form_post('sorted');
 		$sorted = explode(',', $sorted);
 
@@ -313,8 +286,8 @@ class Backend_home extends CI_Model {
 		die('success');
 	}
 
-	function _new_featuredshowcase($id_parent = 0){
-		$data = array('subtitle' => 'New Featured Showcase', 'multilanguage' => false, 'modal_size' => 'modal-lg', 'view' => 'home_new_featuredshowcase');
+	function _new_featuredartikel($id_parent = 0){
+		$data = array('subtitle' => 'New Featured Artikel', 'multilanguage' => false, 'modal_size' => 'modal-lg', 'view' => 'home_new_featuredartikel');
 
 		$row = db_insert_fill('featured_showcase');
 		$data['row'] = $row;// dd($row);
@@ -322,8 +295,8 @@ class Backend_home extends CI_Model {
 		return $data;
 	}
 
-	function _new_featuredshowcase_save(){
-		$this->prep_featuredshowcase();
+	function _new_featuredartikel_save(){
+		$this->prep_featuredartikel();
 
 		$db_id = Common_form_insert();
 		//dd($db_id);
@@ -332,8 +305,8 @@ class Backend_home extends CI_Model {
 		}
 	}
 
-	function _edit_featuredshowcase($id){
-		$data = array('subtitle' => 'Edit Featured Showcase', 'multilanguage' => false, 'modal_size' => 'modal-lg', 'view' => 'home_new_featuredshowcase');
+	function _edit_featuredartikel($id){
+		$data = array('subtitle' => 'Edit Featured Artikel', 'multilanguage' => false, 'modal_size' => 'modal-lg', 'view' => 'home_new_featuredartikel');
 
 		$row = db_entry('featured_showcase', $id);
 		$data['row'] = $row;
@@ -341,8 +314,8 @@ class Backend_home extends CI_Model {
 		return $data;
 	}
 
-	function _edit_featuredshowcase_save($id){
-		$this->prep_featuredshowcase();
+	function _edit_featuredartikel_save($id){
+		$this->prep_featuredartikel();
 
 		$db_id = Common_form_update($id);
 		//dd($db_id);
@@ -351,16 +324,16 @@ class Backend_home extends CI_Model {
 		}
 	}
 
-	function _remove_featuredshowcase($id){
+	function _remove_featuredartikel($id){
 		$data = [
-			'subtitle' => 'Remove Featured Showcase',
+			'subtitle' => 'Remove Featured Artikel',
 			'view' => '_remove'
 		];
 
 		return $data;
 	}
 
-	function _remove_featuredshowcase_save($id){
+	function _remove_featuredartikel_save($id){
 		db_remove('featured_showcase', $id);
 	}
 
@@ -368,7 +341,7 @@ class Backend_home extends CI_Model {
 
 	// --- Section Showcase End --- //
 
-	//========================================================================================================//
+	//============================================================//
 
 	// --- Section Testimonial --- //
 
@@ -422,7 +395,7 @@ class Backend_home extends CI_Model {
 	}
 
 	function _new_testimonial($id_parent = 0){
-		$data = array('subtitle' => 'New Testimonial', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'testimonial_new_testimonial');
+		$data = array('subtitle' => 'New Tanggapan Jamaah Masjid', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'testimonial_new_testimonial');
 
 		$row = db_insert_fill('testimonial', array(), $this->testimonial_lang);
 		$data['row'] = $row;// dd($row);
@@ -448,7 +421,7 @@ class Backend_home extends CI_Model {
 	}
 
 	function _edit_testimonial($id){
-		$data = array('subtitle' => 'Edit Testimonial', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'testimonial_new_testimonial');
+		$data = array('subtitle' => 'Edit Tanggapan Jamaah Masjid', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'testimonial_new_testimonial');
 
 		$row = db_entry('testimonial', $id, null, $this->testimonial_lang);
 		$data['row'] = $row;
@@ -477,7 +450,7 @@ class Backend_home extends CI_Model {
 
 	function _remove_testimonial($id){
 		$data = [
-			'subtitle' => 'Remove Testimonial',
+			'subtitle' => 'Remove Tanggapan Jamaah',
 			'view' => '_remove'
 		];
 
@@ -508,104 +481,6 @@ class Backend_home extends CI_Model {
 		die('success');
 	}
 
-	// ======================= LOGO HOME ======================== //
-
-	function prep_logo(){
-		Common_form_init('logo');
-		
-		//Common_form_set_lang('image', 'Image', 'image|172x141');
-		Common_form_set('image', 'File', 'file');
-		Common_form_set_lang('title', 'Title', 'required');
-		Common_form_set_lang('subtitle', 'Sub Title', 'not_required');
-		Common_form_set('url', 'Button URL (optional)', 'not_required');
-		//Common_form_set('link', 'Link', 'not_required');
-		//Common_form_set_lang('content', 'Content', 'not_required');
-		Common_form_set('url', 'Button URL (optional)', 'url_title_lowercase');
-		Common_form_set('is_publish', 'Select Status', 'not_required');
-	}
-
-	function _logo_sorter(){
-		$sorted = form_post('sorted');
-		$sorted = explode(',', $sorted);
-
-		foreach ($sorted as $index => $id){
-			$data['sorting'] = $index;
-			$this->db->where('id', $id);
-			$this->db->update('logo', $data);
-		}
-
-		die('success');
-	}
-
-	function _new_logo($id_parent = 0){
-		$data = array('subtitle' => 'New Logo', 'multilanguage' => true, 'modal_size' => 'modal-lg',  'view' => 'logo_new_logo');
-
-		$row = db_insert_fill('logo', array(), $this->logo_lang);
-		$data['row'] = $row;// dd($row);
-
-		return $data;
-	}
-
-	function _new_logo_save(){
-		$this->prep_logo();
-
-		$title = form_post('title');
-		$url = form_post('url');
-
-		if ($title && empty($url)){
-			$db_data['url'] = url_title_lowercase($title);
-		}
-
-		$db_id = Common_form_insert($db_data);
-		//dd($db_id);
-		if ($db_id){
-			die('success');
-		}
-	}
-
-	function _edit_logo($id){
-		$data = array('subtitle' => 'Edit Logo', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'logo_new_logo');
-
-		$row = db_entry('logo', $id, null, $this->logo_lang);
-		$data['row'] = $row;
-
-		return $data;
-	}
-
-	function _edit_logo_save($id){
-		$this->prep_logo();
-
-		$title = form_post('title');
-		$url = form_post('url');
-
-		$db_data = array();
-
-		if ($title && empty($url)){
-			$_POST['url'] = $title;
-		}
-
-		$db_id = Common_form_update($id, 'id', $db_data);
-		//dd($db_id);
-		if ($db_id){
-			die('success');
-		}
-	}
-
-	function _remove_logo($id){
-		$data = [
-			'subtitle' => 'Remove Logo',
-			'view' => '_remove'
-		];
-
-		return $data;
-	}
-
-	function _remove_logo_save($id){
-		db_remove('logo', $id);
-	}
-
-	// ======================= LOGO HOME END======================== //
-
 	// --- Section Testimonial End --- //
 
 	// ============================================================= //
@@ -614,17 +489,20 @@ class Backend_home extends CI_Model {
 
 	function _edit_sectioncontact_save(){
 		$contact_names = [
+			'contact_title',
 			'contact_address',
 			// 'contact_dua',
-			'contact_phone',
-			'contact_email'
+			'contact_phone_title',
+			'contact_phone_number'
 		];
 
 		$contact_options = [
 			[null, 'not_required'],
+			[null, 'not_required'],
 			// [null, 'required'],
 			[null, 'not_required'],
-			[null, 'not_required|valid_email']
+			[null, 'not_required']
+			// [null, 'not_required|valid_email']
 		];
 
 		options_save($contact_names, $contact_options, true);
@@ -634,26 +512,6 @@ class Backend_home extends CI_Model {
 
 	function _sectioncontact(){
 		options_save($this->contact_names, $this->contact_options, true);
-
-		die('success');
-	}
-
-	// ------------------------------------------------------------- //
-
-	function _edit_overviewpagecontact_save(){
-		$overviewpagecontact_names = [
-			'overviewpagecontact'
-		];
-		$overviewpagecontact_options = [
-			[null, null]
-		];
-		options_save($overviewpagecontact_names, $overviewpagecontact_options, true);
-
-		die('success');
-	}
-
-	function _overviewpagecontact(){
-		options_save($this->overviewpagecontact_names, $this->overviewpagecontact_options, true);
 
 		die('success');
 	}
@@ -671,7 +529,6 @@ class Backend_home extends CI_Model {
 			'sosmed_title',
 			'sosmed_facebook',
 			'sosmed_twitter',
-			'sosmed_linkedin',
 			'sosmed_youtube',
 			'sosmed_instagram',
 			'sosmed_image'
@@ -679,7 +536,6 @@ class Backend_home extends CI_Model {
 
 		$sosmed_options = [
 			[null, 'not_required'],
-			[null, 'not_required|valid_url'],
 			[null, 'not_required|valid_url'],
 			[null, 'not_required|valid_url'],
 			[null, 'not_required|valid_url'],
@@ -766,27 +622,27 @@ class Backend_home extends CI_Model {
 
 	// ==================== FOOTER MENU START ==================== //
 
-	// function _edit_footermenu_save(){
-	// 	$footermenu_names = [
-	// 		'menu_1',
-	// 		'menu_2',
-	// 		'menu_3',
-	// 		'menu_4'
-	// 	];
+	function _edit_footercontact_save(){
+		$footercontact_names = [
+			'menu_1',
+			'menu_2',
+			'menu_3',
+			'menu_4'
+		];
 
-	// 	$footermenu_options = [
-	// 		[null, 'required'],
-	// 		[null, 'required'],
-	// 		[null, 'required'],
-	// 		[null, 'required']
-	// 	];
+		$footercontact_options = [
+			[null, 'required'],
+			[null, 'required'],
+			[null, 'required'],
+			[null, 'required']
+		];
 
-	// 	options_save($footermenu_names, $footermenu_options, true);
-	// 	die('success');
-	// }
+		options_save($footercontact_names, $footercontact_options, true);
+		die('success');
+	}
 
-	// function _footermenu(){
-	// 	options_save($this->footermenu_names, $this->footermenu_options, true);
+	// function _footercontact(){
+	// 	options_save($this->footercontact_names, $this->footercontact_options, true);
 
 	// 	die('success');
 	// }

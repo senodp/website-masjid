@@ -1,25 +1,7 @@
 <form action="<?=current_url()?>" method="post" enctype="multipart/form-data">			
 	<div class="row">
-		
-		<div class="col-md-6">
-			<div class="form-group">
-				<label for="image">Image Logo</label>
-				<?=html_upload_img($row['image'],'image','services','600x600');?>
-			</div>
-		</div>
-		<div class="col-md-6">
-		    <div class="form-group">
-				<label for="is_publish">Publish / Not Publish</label>
-				<select name="is_publish" class="form-control">
-					<option value="1" <?php echo $row['is_publish']==1 ? "selected" : "";?>>Publish</option>
-					<option value="0" <?php echo !$row['is_publish'] ? "selected" : "";?>>Not Publish</option>
-				</select>
-			</div>
-		</div>
-		
 		<div class="col-md-12">
 			<div class="tab-content">
-
 				<div class="tab-pane active" id="mt-eng">
 					<div class="form-group">
 						<label for="title">Title</label>
@@ -48,13 +30,28 @@
 
 			</div>
 		</div>
-		<!-- <div class="col-md-12">
-			<div class="form-group">
-				<label for="url">URL (Optional)</label>
-				<input type="text" class="form-control <?=error_class('url')?>" name="url" value="<?=set_row_value('url',$row)?>" />
-				<?=error_block('url')?>
+		<div class="col-md-4">
+			
+		</div>
+		<div class="col-md-4">
+		    <div class="form-group">
+				<label for="is_publish">Publish / Not Publish</label>
+				<select name="is_publish" class="form-control">
+					<option value="1" <?php echo $row['is_publish']==1 ? "selected" : "";?>>Publish</option>
+					<option value="0" <?php echo !$row['is_publish'] ? "selected" : "";?>>Not Publish</option>
+				</select>
 			</div>
-		</div> -->
+		</div>
+		<div class="col-md-4">
+			
+		</div>
+		<div class="col-md-12">
+			<div class="form-group">
+				<label for="link">Link (Optional)</label>
+				<input type="text" class="form-control <?=error_class('link')?>" name="link" value="<?=set_row_value('link',$row)?>" />
+				<?=error_block('link')?>
+			</div>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12 text-center"> <hr>

@@ -48,7 +48,7 @@
 
 <div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sectionabout">
 	<div class="card-header">
-		<h3 class="mt-0 mb-2">Section About</h3>
+		<h3 class="mt-0 mb-2">Section Tentang Masjid</h3>
 		<ul class="nav nav-tabs card-header-tabs">
 			<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#about-eng">English</a></li>
 			<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#about-ind">Indonesia</a></li>
@@ -73,11 +73,7 @@
 									<input type="text" class="input-save form-control <?=error_class('about_text_profile')?>" name="about_text_profile" value="<?=option_value('about_text_profile')?>" />
 									<?=error_block('about_text_profile')?>
 								</div>
-								<div class="form-group">
-									<label>Text Our Team</label>
-									<input type="text" class="input-save form-control <?=error_class('about_text_ourteam')?>" name="about_text_ourteam" value="<?=option_value('about_text_ourteam')?>" />
-									<?=error_block('about_text_ourteam')?>
-								</div>
+								
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
@@ -92,11 +88,7 @@
 									<input type="text" class="input-save form-control <?=error_class('about_text_profile_url')?>" name="about_text_profile_url" value="<?=option_value('about_text_profile_url')?>" />
 									<?=error_block('about_text_profile_url')?>
 								</div>
-								<div class="form-group">
-									<label>Url Text Our Team</label>
-									<input type="text" class="input-save form-control <?=error_class('about_text_ourteam_url')?>" name="about_text_ourteam_url" value="<?=option_value('about_text_ourteam_url')?>" />
-									<?=error_block('about_text_ourteam_url')?>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -124,52 +116,64 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="about_image">Image</label>
-					<?=html_upload_img(option_value('about_image'), 'about_image', 'options', '960x1080', 'jpg', 'input-save');?>
+					<?=html_upload_img(option_value('about_image'), 'about_image', 'options', '800x800', 'jpg', 'input-save');?>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="card-footer">
-		<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
-	</div>
-</div>
-
-<div class="card form-save" data-url="<?=$Page_url?>/edit-backgroundservices">
-	<div class="row">
-		<div class="col-md-12">
-			<div id="accordion">
-		        <div class="card">
-		        	<a class="collapsed card-link p-1" data-toggle="collapse" href="#backservices">
-			            <div class="card-header text-center">
-			                Click to fill in the header background services image<br>
-			                <small style="color: #6c757d;">recommended image size is 1412x1445 pixels</small>
-			            </div>
-		            </a>
-		            <div id="backservices" class="collapse" data-parent="#accordion">
-		            	<!-- <div class="card-header text-center">
-							<h3 class="mt-0 mb-0">Header Image</h3>
-						</div> -->
-		                <div class="card-body">
-		                    <div class="row">
-		                        <div class="col-md-12">
-		                            <div class="form-group">
-										<!-- <label for="home_kabardaripedati_image">Image</label> -->
-										<?=html_upload_img(option_value('backgroundservices_image'), 'backgroundservices_image', 'options', '1412x1445', 'jpg', 'input-save');?>
-									</div>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="card-footer text-center">
-							<button class="btn btn-sm btn-block btn-warning btn-save btn-rounded" tabindex="4"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
-						</div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
+		<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 	</div>
 </div>
 
 <div class="row">
+	<div class="col-md-2">
+		
+	</div>
+	<div class="col-md-8">
+		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewprogramkegiatan">
+			<div class="card-header text-center">
+				<h3 class="mt-0 mb-1">Overview Program & Kegiatan</h3>
+				<ul class="nav nav-tabs card-header-tabs">
+					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overview_program_kegiatan-eng">English</a></li>
+					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overview_program_kegiatan-ind">Indonesia</a></li>
+				</ul>
+			</div>
+			<div class="card-body cards-container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tab-content">
+							<div class="tab-pane active" id="overview_program_kegiatan-eng">
+								<div class="form-group">
+									<!-- <label for="dewankomisaris_overview_deskripsi">overview_program_kegiatanon</label> -->
+									<textarea class="editor input-save form-control <?=error_class('overview_program_kegiatan')?>" name="overview_program_kegiatan" rows="3" data-height="90">
+										<?=option_value('overview_program_kegiatan', null)?>
+									</textarea>
+								</div>
+							</div>
+							<div class="tab-pane" id="overview_program_kegiatan-ind">
+								<div class="form-group">
+									<!-- <label for="dewankomisaris_overview_deskripsi">overview_program_kegiatan</label> -->
+									<textarea class="editor input-save form-control <?=error_class('ind_overview_program_kegiatan')?>" name="ind_overview_program_kegiatan" rows="3" data-height="90">
+										<?=option_value('overview_program_kegiatan', null, 'ind')?>
+									</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<button class="btn btn-primary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		
+	</div>
+</div>
+
+<!-- <div class="row">
 	<div class="col-md-3">
 		
 	</div>
@@ -212,34 +216,34 @@
 	<div class="col-md-3">
 		
 	</div>
-</div>
+</div> -->
 
 <div class="card cards mt-0">
 	<div class="card-header">
 		<div class="row">
 			<div class="col">
-				<h3 class="m-0">List Services</h3><small><i>Click and drag items to change order</i></small>
+				<h3 class="m-0">List Program dan Kegiatan</h3><small><i>Click and drag items to change order</i></small>
 			</div>
 			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-services" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> New Services</a>
+				<a href="<?=$Page_url?>/new-program" class="btn-ajax btn-sm btn-primary btn-rounded"><?=mdi('plus')?> New Program & Kegiatan</a>
 			</div>
 		</div>
 	</div>
 	<div class="card-body cards-container">
-		<div class="row is-sortable" data-post-url="<?=$Page_url?>/services-sorter/">
-			<?php foreach ($services as $pub): ?>
-				<div class="col-md-3 mb-0" data-id="<?=$pub['id']?>">
+		<div class="row is-sortable" data-post-url="<?=$Page_url?>/program-sorter/">
+			<?php foreach ($program as $prog): ?>
+				<div class="col-md-3 mb-0" data-id="<?=$prog['id']?>">
 					<div class="card">
 						<div class="card-header text-center" style="min-height: 70px;">
-							<?php if ( !empty($pub['title']) ): ?><h4 class="m-0"><?=$pub['title']?></h4><?php endif; ?>
+							<?php if ( !empty($prog['title']) ): ?><h4 class="m-0"><?=$prog['title']?></h4><?php endif; ?>
 						</div>
 
 						<div class="row">
 							<div class="col-md-1">	
 
 							</div>
-							<div class="col-md-10" style="background-color: #444;">	
-								<img src="<?=img_thumb_url($pub['image'], 'services', 'holder.js/600x600?auto=yes')?>" alt="" class="card-img-top">
+							<div class="card-header text-center" style="min-height: 70px;">	
+								<?=$prog['content']?>
 							</div>
 							<div class="col-md-1">	
 
@@ -249,10 +253,10 @@
 						<div class="card-footer">
 							<div class="row m-0">
 								<div class="col p-0 m-0 text-left">
-									<a href="<?=$Page_url.'/edit-services/'.$pub['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
+									<a href="<?=$Page_url.'/edit-program/'.$prog['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
 								</div>
 								<div class="col p-0 m-0 text-right">
-									<a href="<?=$Page_url.'/remove-services/'.$pub['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
+									<a href="<?=$Page_url.'/remove-program/'.$prog['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
 								</div>
 							</div>
 						</div>
@@ -264,139 +268,13 @@
 </div>
 
 <div class="row">
-	<div class="col-md-6">
-		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sectionshowcase">
-			<div class="card-header text-center">
-				<h3 class="mt-0 mb-2">Title & Description - Showcase</h3>
-				<ul class="nav nav-tabs card-header-tabs">
-					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#showc-eng">English</a></li>
-					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#showc-ind">Indonesia</a></li>
-				</ul>
-			</div>
-			<div class="card-body cards-container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="tab-content">
-							<div class="tab-pane active" id="showc-eng">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label for="sectionshowcase_title">Title</label>
-											<textarea class="editor input-save form-control <?=error_class('sectionshowcase_title')?>" name="sectionshowcase_title" rows="3" data-height="300">
-											<?=option_value('sectionshowcase_title')?>
-											</textarea>
-											<?=error_block('sectionshowcase_title')?>
-										</div>
-										<div class="form-group">
-											<label for="sectionshowcase_description">Description</label>
-											<textarea class="editor input-save form-control <?=error_class('sectionshowcase_description')?>" name="sectionshowcase_description" rows="3" data-height="300">
-											<?=option_value('sectionshowcase_description')?>
-											</textarea>
-											<?=error_block('sectionshowcase_description')?>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Button Label</label>
-											<input type="text" class="input-save form-control <?=error_class('sectionshowcase_label_button')?>" name="sectionshowcase_label_button" value="<?=option_value('sectionshowcase_label_button')?>" />
-											<?=error_block('sectionshowcase_label_button')?>
-										</div>
-										<div class="form-group">
-											<label>URL / Link</label>
-											<input type="text" class="input-save form-control <?=error_class('sectionshowcase_url')?>" name="sectionshowcase_url" value="<?=option_value('sectionshowcase_url')?>" />
-											<?=error_block('sectionshowcase_url')?>
-										</div>
-									</div>
-								</div>												
-							</div>
-
-							<div class="tab-pane" id="showc-ind">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label for="sectionshowcase_title">Title</label>
-											<textarea class="editor input-save form-control <?=error_class('ind_sectionshowcase_title')?>" name="ind_sectionshowcase_title" rows="3" data-height="300"><?=option_value('sectionshowcase_title', null, 'ind')?></textarea>
-											<?=error_block('ind_sectionshowcase_title')?>
-										</div>
-										<div class="form-group">
-											<label>Description</label>
-											<textarea class="editor input-save form-control <?=error_class('ind_sectionshowcase_description')?>" name="ind_sectionshowcase_description" rows="3" data-height="300"><?=option_value('sectionshowcase_description', null, 'ind')?></textarea>
-											<?=error_block('ind_sectionshowcase_description')?>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Button Label (Optional)</label>
-											<input type="text" class="input-save form-control <?=error_class('ind_sectionshowcase_label_button')?>" name="ind_sectionshowcase_label_button" value="<?=option_value('sectionshowcase_label_button', null, 'ind')?>" />
-											<?=error_block('ind_sectionshowcase_label_button')?>
-										</div>
-										<div class="form-group">
-											<label>URL / Link (Optional)</label>
-											<input type="text" class="input-save form-control <?=error_class('ind_sectionshowcase_url')?>" name="ind_sectionshowcase_url" value="<?=option_value('sectionshowcase_url', null, 'ind')?>" />
-											<?=error_block('ind_sectionshowcase_url')?>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="card mt-0 cards">
-		<div class="card-header">
-			<div class="row">
-				<div class="col">
-					<h3 class="m-0">Featured Showcase</h3><small><i>Click and drag items to change order</i></small>
-				</div>
-				<div class="col text-right">
-					<!-- <a href="<?=$Page_url?>/new-featuredshowcase" class="btn-ajax btn-sm btn-rounded btn-dark"><?=mdi('plus')?> New Showcase</a> -->
-				</div>
-			</div>
-		</div>
-		<div class="card-body cards-container">
-			<div class="row is-sortable" data-post-url="<?=$Page_url?>/featuredshowcase-sorter/">
-				<?php foreach ($rowing as $pet): ?>
-					<div class="col-md-6 mb-0" data-id="<?=$pet['id']?>">
-						<div class="card">
-							<div class="card-header" style="text-align: center; min-height: 70px;">
-								<h4 title="<?=$pet['title'] ?>" class="m-0"><?=str_shorten($pet['title'], '65')?></h4>
-							</div>
-							<div class="row">
-								<div class="col-md-12">	
-									<img src="<?=img_url($pet['cover'], 'listpages')?>" alt="thumbnail" class="card-img-top">
-								</div>
-							</div>
-							<div class="card-footer">
-								<div class="row m-0">
-									<div class="col p-0 m-0 text-center">
-										<a href="<?=$Page_url.'/edit-featuredshowcase/'.$pet['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
-										<a href="<?=$Page_url.'/remove-featuredshowcase/'.$pet['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-	</div>
-</div>
-
-<div class="row">
 	<div class="col-md-2">
 		
 	</div>
 	<div class="col-md-8">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpagetestimonial">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-1">Overview Page Testimonial</h3>
+				<h3 class="mt-0 mb-1">Overview Tanggapan Jamaah Masjid</h3>
 				<ul class="nav nav-tabs card-header-tabs">
 					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overviewpagetestimonial-eng">English</a></li>
 					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overviewpagetestimonial-ind">Indonesia</a></li>
@@ -427,7 +305,7 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-secondary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-primary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
@@ -439,10 +317,10 @@
 	<div class="card-header">
 		<div class="row">
 			<div class="col">
-				<h3 class="m-0">List Testimonial</h3><small><i>Click and drag items to change order</i></small>
+				<h3 class="m-0">List Tanggapan Jamaah Masjid</h3><small><i>Click and drag items to change order</i></small>
 			</div>
 			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-testimonial" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> Add Testimonial</a>
+				<a href="<?=$Page_url?>/new-testimonial" class="btn-ajax btn-sm btn-primary btn-rounded"><?=mdi('plus')?> Add Tanggapan</a>
 			</div>
 		</div>
 	</div>
@@ -475,36 +353,78 @@
 </div>
 
 <div class="row">
-	<div class="col-md-2">
-		
-	</div>
-	<div class="col-md-8">
-		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpagelogo">
+	<div class="col-md-6">
+		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sectionartikel">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-1">Overview Page Logo Clients</h3>
+				<h3 class="mt-0 mb-2">Section Artikel - Artikel</h3>
 				<ul class="nav nav-tabs card-header-tabs">
-					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overviewpagelogo-eng">English</a></li>
-					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overviewpagelogo-ind">Indonesia</a></li>
+					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#showc-eng">English</a></li>
+					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#showc-ind">Indonesia</a></li>
 				</ul>
 			</div>
 			<div class="card-body cards-container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="tab-content">
-							<div class="tab-pane active" id="overviewpagelogo-eng">
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagelogoon</label> -->
-									<textarea class="editor input-save form-control <?=error_class('overviewpagelogo')?>" name="overviewpagelogo" rows="3" data-height="90">
-										<?=option_value('overviewpagelogo', null)?>
-									</textarea>
-								</div>
+							<div class="tab-pane active" id="showc-eng">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="sectionartikel_title">Title</label>
+											<textarea class="editor input-save form-control <?=error_class('sectionartikel_title')?>" name="sectionartikel_title" rows="3" data-height="300">
+											<?=option_value('sectionartikel_title')?>
+											</textarea>
+											<?=error_block('sectionartikel_title')?>
+										</div>
+										<!-- <div class="form-group">
+											<label for="sectionartikel_description">Description</label>
+											<textarea class="editor input-save form-control <?=error_class('sectionartikel_description')?>" name="sectionartikel_description" rows="3" data-height="300">
+											<?=option_value('sectionartikel_description')?>
+											</textarea>
+											<?=error_block('sectionartikel_description')?>
+										</div> -->
+									</div>
+									<!-- <div class="col-md-12">
+										<div class="form-group">
+											<label>Button Label</label>
+											<input type="text" class="input-save form-control <?=error_class('sectionartikel_label_button')?>" name="sectionartikel_label_button" value="<?=option_value('sectionartikel_label_button')?>" />
+											<?=error_block('sectionartikel_label_button')?>
+										</div>
+										<div class="form-group">
+											<label>URL / Link</label>
+											<input type="text" class="input-save form-control <?=error_class('sectionartikel_url')?>" name="sectionartikel_url" value="<?=option_value('sectionartikel_url')?>" />
+											<?=error_block('sectionartikel_url')?>
+										</div>
+									</div> -->
+								</div>												
 							</div>
-							<div class="tab-pane" id="overviewpagelogo-ind">
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagelogo</label> -->
-									<textarea class="editor input-save form-control <?=error_class('ind_overviewpagelogo')?>" name="ind_overviewpagelogo" rows="3" data-height="90">
-										<?=option_value('overviewpagelogo', null, 'ind')?>
-									</textarea>
+
+							<div class="tab-pane" id="showc-ind">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="sectionartikel_title">Title</label>
+											<textarea class="editor input-save form-control <?=error_class('ind_sectionartikel_title')?>" name="ind_sectionartikel_title" rows="3" data-height="300"><?=option_value('sectionartikel_title', null, 'ind')?></textarea>
+											<?=error_block('ind_sectionartikel_title')?>
+										</div>
+										<!-- <div class="form-group">
+											<label>Description</label>
+											<textarea class="editor input-save form-control <?=error_class('ind_sectionartikel_description')?>" name="ind_sectionartikel_description" rows="3" data-height="300"><?=option_value('sectionartikel_description', null, 'ind')?></textarea>
+											<?=error_block('ind_sectionartikel_description')?>
+										</div> -->
+									</div>
+									<!-- <div class="col-md-12">
+										<div class="form-group">
+											<label>Button Label (Optional)</label>
+											<input type="text" class="input-save form-control <?=error_class('ind_sectionartikel_label_button')?>" name="ind_sectionartikel_label_button" value="<?=option_value('sectionartikel_label_button', null, 'ind')?>" />
+											<?=error_block('ind_sectionartikel_label_button')?>
+										</div>
+										<div class="form-group">
+											<label>URL / Link (Optional)</label>
+											<input type="text" class="input-save form-control <?=error_class('ind_sectionartikel_url')?>" name="ind_sectionartikel_url" value="<?=option_value('sectionartikel_url', null, 'ind')?>" />
+											<?=error_block('ind_sectionartikel_url')?>
+										</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -512,46 +432,49 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-secondary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-2">
-		
-	</div>
-</div>
-<div class="card cards mt-0">
-	<div class="card-header">
-		<div class="row">
-			<div class="col">
-				<h3 class="m-0">List Logo</h3><small><i>Click and drag items to change order</i></small>
-			</div>
-			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-logo" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> New Logo</a>
+	<div class="col-md-6">
+		<div class="card mt-0 cards">
+		<div class="card-header">
+			<div class="row">
+				<div class="col">
+					<h3 class="m-0">Featured Artikel</h3><small><i>Click and drag items to change order</i></small>
+				</div>
+				<div class="col text-right">
+					<!-- <a href="<?=$Page_url?>/new-featuredshowcase" class="btn-ajax btn-sm btn-rounded btn-dark"><?=mdi('plus')?> New Showcase</a> -->
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card-body cards-container">
-		<div class="row is-sortable" data-post-url="<?=$Page_url?>/logo-sorter/">
-			<?php foreach ($logo as $log): ?>
-				<div class="col-md-3 mb-0" data-id="<?=$log['id']?>">
-					<div class="card">
-						<div class="card-header text-center">
-							<?php if ( !empty($log['title']) ): ?><h4 class="m-0"><?=$log['title']?></h4><?php endif; ?>
-						</div>
-						<img src="<?=img_url($log['image'], 'logo')?>" alt="" class="card-img-top">
-						<div class="card-footer">
-							<div class="row m-0">
-								<div class="col p-0 m-0 text-center">
-									<a href="<?=$Page_url.'/edit-logo/'.$log['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
-									<a href="<?=$Page_url.'/remove-logo/'.$log['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
+		<div class="card-body cards-container">
+			<div class="row is-sortable" data-post-url="<?=$Page_url?>/featuredshowcase-sorter/">
+				<?php foreach ($rowing as $pet): ?>
+					<div class="col-md-6 mb-0" data-id="<?=$pet['id']?>">
+						<div class="card">
+							<div class="card-header" style="text-align: center; min-height: 70px;">
+								<h4 title="<?=$pet['title'] ?>" class="m-0"><?=str_shorten($pet['title'], '65')?></h4>
+							</div>
+							<div class="row">
+								<div class="col-md-12">	
+									<img src="<?=img_url($pet['cover'], 'listpages')?>" alt="thumbnail" class="card-img-top">
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="row m-0">
+									<div class="col p-0 m-0 text-center">
+										<a href="<?=$Page_url.'/edit-featuredartikel/'.$pet['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
+										<a href="<?=$Page_url.'/remove-featuredartikel/'.$pet['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			<?php endforeach; ?>
+				<?php endforeach; ?>
+			</div>
 		</div>
+	</div>
 	</div>
 </div>
 
@@ -559,7 +482,7 @@
 	<div class="col-md-6">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sectioncontact">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-2">Overview Address</h3>
+				<h3 class="mt-0 mb-2">Overview Saran dan Kontak</h3>
 				<!-- <h3 class="mt-0 mb-2">Overview Page Contact / Let's Decode!</h3> -->
 				<ul class="nav nav-tabs card-header-tabs">
 					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#sections-eng">English</a></li>
@@ -574,8 +497,18 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
+											<!-- <label for="contact_title">Description</label> -->
+											<textarea class="editor input-save form-control <?=error_class('contact_title')?>" name="contact_title" rows="3" data-height="300">
+											<?=option_value('contact_title')?>
+											</textarea>
+											<?=error_block('contact_title')?>
+										</div>
+										
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
 											<!-- <label for="contact_address">Description</label> -->
-											<textarea class="editor input-save form-control <?=error_class('contact_address')?>" name="contact_address" rows="3" data-height="300">
+											<textarea class="input-save form-control <?=error_class('contact_address')?>" name="contact_address" rows="3" data-height="300">
 											<?=option_value('contact_address')?>
 											</textarea>
 											<?=error_block('contact_address')?>
@@ -590,8 +523,16 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
+											<!-- <label for="contact_title">Title</label> -->
+											<textarea class="editor input-save form-control <?=error_class('ind_contact_title')?>" name="ind_contact_title" rows="3" data-height="300"><?=option_value('contact_title', null, 'ind')?></textarea>
+											<?=error_block('ind_contact_title')?>
+										</div>
+										
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
 											<!-- <label for="contact_address">Title</label> -->
-											<textarea class="editor input-save form-control <?=error_class('ind_contact_address')?>" name="ind_contact_address" rows="3" data-height="300"><?=option_value('contact_address', null, 'ind')?></textarea>
+											<textarea class="input-save form-control <?=error_class('ind_contact_address')?>" name="ind_contact_address" rows="3" data-height="300"><?=option_value('contact_address', null, 'ind')?></textarea>
 											<?=error_block('ind_contact_address')?>
 										</div>
 										
@@ -603,16 +544,16 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<i class="fa fa-phone"></i> <label>Phone</label>
-									<input type="text" class="input-save form-control <?=error_class('contact_phone')?>" name="contact_phone" value="<?=option_value('contact_phone')?>" />
-									<?=error_block('contact_phone')?>
+									<i class="fa fa-edit"></i> <label>Title</label>
+									<input type="text" class="input-save form-control <?=error_class('contact_phone_title')?>" name="contact_phone_title" value="<?=option_value('contact_phone_title')?>" />
+									<?=error_block('contact_phone_title')?>
 								</div>
 							</div>
 							<div class="col-md-6">	
 								<div class="form-group">
-									<i class="fa fa-envelope"></i> <label>Email</label>
-									<input type="text" class="input-save form-control <?=error_class('contact_email')?>" name="contact_email" value="<?=option_value('contact_email')?>" />
-									<?=error_block('contact_email')?>
+									<i class="fa fa-phone"></i> <label>Phone</label>
+									<input type="text" class="input-save form-control <?=error_class('contact_phone_number')?>" name="contact_phone_number" value="<?=option_value('contact_phone_number')?>" />
+									<?=error_block('contact_phone_number')?>
 								</div>
 							</div>
 						</div>
@@ -620,7 +561,7 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
@@ -660,12 +601,6 @@
 								
 								</div>
 								<div class="form-group">
-									<label for="sosmed_linkedin">Linkedin</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_linkedin')?>" name="sosmed_linkedin" value="<?=option_value('sosmed_linkedin')?>" />
-									<?=error_block('sosmed_linkedin')?>
-									
-								</div>
-								<div class="form-group">
 									<label for="sosmed_youtube">Youtube</label>
 									<input type="text" class="input-save form-control <?=error_class('sosmed_youtube')?>" name="sosmed_youtube" value="<?=option_value('sosmed_youtube')?>" />
 									<?=error_block('sosmed_youtube')?>
@@ -684,56 +619,85 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-1">
-		
+<div class="card mt-3 form-save" data-url="<?=$Page_url?>/edit-footercontact">
+	<div class="card-header">
+		<h3 class="mt-0 mb-2">Footer Menu</h3>
+		<ul class="nav nav-tabs card-header-tabs">
+			<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#ho-footer-eng">English</a></li>
+			<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#ho-footer-ind">Indonesia</a></li>
+		</ul>
 	</div>
-	<div class="col-md-10">
-		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpagecontact">
-			<div class="card-header text-center">
-				<h3 class="mt-0 mb-2">Overview Page Contact / Let's Decode!</h3>
-				<ul class="nav nav-tabs card-header-tabs">
-					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overviewpagecontact-eng">English</a></li>
-					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overviewpagecontact-ind">Indonesia</a></li>
-				</ul>
-			</div>
-			<div class="card-body cards-container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="tab-content">
-							<div class="tab-pane active" id="overviewpagecontact-eng">
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagecontacton</label> -->
-									<textarea class="editor input-save form-control <?=error_class('overviewpagecontact')?>" name="overviewpagecontact" rows="3" data-height="90">
-										<?=option_value('overviewpagecontact', null)?>
-									</textarea>
-								</div>
-							</div>
-							<div class="tab-pane" id="overviewpagecontact-ind">
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagecontact</label> -->
-									<textarea class="editor input-save form-control <?=error_class('ind_overviewpagecontact')?>" name="ind_overviewpagecontact" rows="3" data-height="90">
-										<?=option_value('overviewpagecontact', null, 'ind')?>
-									</textarea>
-								</div>
-							</div>
+	<div class="card-body cards-container">
+		<div class="tab-content">
+			<div class="tab-pane active" id="ho-footer-eng">
+				<div class="row justify-content-center">
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="form-control editor input-save <?=error_class('menu_1')?>" name="menu_1" rows="3" data-height="160"><?=option_value('menu_1')?></textarea>
+							<?=error_block('menu_1')?>
 						</div>
 					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="form-control editor input-save <?=error_class('menu_2')?>" name="menu_2" rows="3" data-height="160"><?=option_value('menu_2')?></textarea>
+							<?=error_block('menu_2')?>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="form-control editor input-save <?=error_class('menu_3')?>" name="menu_3" rows="3" data-height="160"><?=option_value('menu_3')?></textarea>
+							<?=error_block('menu_3')?>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="form-control editor input-save <?=error_class('menu_4')?>" name="menu_4" rows="3" data-height="160"><?=option_value('menu_4')?></textarea>
+							<?=error_block('menu_4')?>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+
+			<div class="tab-pane" id="ho-footer-ind">
+				<div class="row justify-content-center">
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="editor input-save form-control <?=error_class('ind_menu_1')?>" name="ind_menu_1" rows="3" data-height="160"><?=option_value('menu_1', null, 'ind')?></textarea>
+							<?=error_block('ind_menu_1')?>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="editor input-save form-control <?=error_class('ind_menu_2')?>" name="ind_menu_2" rows="3" data-height="160"><?=option_value('menu_2', null, 'ind')?></textarea>
+							<?=error_block('ind_menu_2')?>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="editor input-save form-control <?=error_class('ind_menu_3')?>" name="ind_menu_3" rows="3" data-height="160"><?=option_value('menu_3', null, 'ind')?></textarea>
+							<?=error_block('ind_menu_3')?>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<textarea class="editor input-save form-control <?=error_class('ind_menu_4')?>" name="ind_menu_4" rows="3" data-height="160"><?=option_value('menu_4', null, 'ind')?></textarea>
+							<?=error_block('ind_menu_4')?>
+						</div>
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-1">
-		
+	<div class="card-footer text-center">
+		<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span>Save Changes</button>
 	</div>
 </div>
 
