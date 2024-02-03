@@ -7,7 +7,7 @@
 */
 class Backend_team extends CI_Model {
 
-	var $team_lang = array('title', 'position', 'content', 'ups');
+	var $team_lang = array('title', 'position');
 
 	function __construct(){
 		parent::__construct();
@@ -58,8 +58,8 @@ class Backend_team extends CI_Model {
 		Common_form_set_lang('position', 'Position', 'not_required');
 		// Common_form_set_lang('linkedin', 'Linkedin', 'not_required');
 		// Common_form_set_lang('instagram', 'Instagram', 'not_required');
-		Common_form_set_lang('ups', 'Unique Personality Sentence', 'max_length[87]');
-		Common_form_set_lang('content', 'Content', 'max_length[227]');
+		//Common_form_set_lang('ups', 'Unique Personality Sentence', 'max_length[87]');
+		//Common_form_set_lang('content', 'Content', 'max_length[227]');
 		//Common_form_set('file', 'File', 'file');
 		Common_form_set_lang('url', 'Button URL (optional)', 'url_title_lowercase');
 		Common_form_set('is_publish', 'Publish', 'not_required');
@@ -80,7 +80,7 @@ class Backend_team extends CI_Model {
 	}
 
 	function _new_team($id_parent = 0){
-		$data = array('subtitle' => 'New Team', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'team_new_team');
+		$data = array('subtitle' => 'New Pengurus DKM', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'team_new_team');
 
 		$row = db_insert_fill('team', array(), $this->team_lang);
 		$data['row'] = $row;// dd($row);
@@ -106,7 +106,7 @@ class Backend_team extends CI_Model {
 	}
 
 	function _edit_team($id){
-		$data = array('subtitle' => 'Edit Team', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'team_new_team');
+		$data = array('subtitle' => 'Edit Pengurus DKM', 'multilanguage' => true, 'modal_size' => 'modal-lg', 'view' => 'team_new_team');
 
 		$row = db_entry('team', $id, null, $this->team_lang);
 		$data['row'] = $row;
@@ -135,7 +135,7 @@ class Backend_team extends CI_Model {
 
 	function _remove_team($id){
 		$data = [
-			'subtitle' => 'Remove Team',
+			'subtitle' => 'Remove Pengurus DKM',
 			'view' => '_remove'
 		];
 

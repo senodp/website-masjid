@@ -31,20 +31,20 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-12">
+						<!-- <div class="col-md-12">
 							<div class="form-group">
 								<label for="content">Description - <i><small>Max.227 Characters</small></i></label>
 								<textarea class="form-control <?=error_class('content')?>" name="content" rows="3" data-height="100"><?=set_row_value('content',$row)?></textarea>
 								<?=error_block('content')?>
 							</div>
-						</div>		
-						<div class="col-md-12">
+						</div> -->		
+						<!-- <div class="col-md-12">
 							<div class="form-group">
 								<label for="ups">Unique Personality Sentence - <i><small>Max.87 Characters</small></i></label>
 								<textarea class="form-control <?=error_class('ups')?>" name="ups" rows="3" data-height="100"><?=set_row_value('ups',$row)?></textarea>
 								<?=error_block('ups')?>
 							</div>
-						</div>		
+						</div> -->		
 					</div>				
 				</div>
 
@@ -64,20 +64,20 @@
 								<?=error_block('ind_position')?>
 							</div>
 						</div>
-						<div class="col-md-12">
+						<!-- <div class="col-md-12">
 							<div class="form-group">
 								<label for="ind_content">Description - <i><small>Max.227 Characters</small></i></label>
 								<textarea class="form-control <?=error_class('ind_content')?>" name="ind_content" rows="3" data-height="100"><?=set_row_value('ind_content',$row)?></textarea>
 								<?=error_block('ind_content')?>
 							</div>
-						</div>		
-						<div class="col-md-12">
+						</div> -->		
+						<!-- <div class="col-md-12">
 							<div class="form-group">
 								<label for="ind_ups">Unique Personality Sentence - <i><small>Max.87 Characters</small></i></label>
 								<textarea class="form-control <?=error_class('ind_ups')?>" name="ind_ups" rows="3" data-height="100"><?=set_row_value('ind_ups',$row)?></textarea>
 								<?=error_block('ind_ups')?>
 							</div>
-						</div>			
+						</div> -->			
 					</div>				
 				</div>
 			</div>

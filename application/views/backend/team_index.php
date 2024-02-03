@@ -5,7 +5,7 @@
 	<div class="col-md-8">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpageteam">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-1">Overview Page team</h3>
+				<h3 class="mt-0 mb-1">Overview Susunan Pengurus DKM</h3>
 				<ul class="nav nav-tabs card-header-tabs">
 					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overviewpageteam-eng">English</a></li>
 					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overviewpageteam-ind">Indonesia</a></li>
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-secondary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-primary btn-sm btn-block btn-save btn-rounded" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
@@ -58,10 +58,10 @@
 	<div class="card-header">
 		<div class="row">
 			<div class="col">
-				<h3 class="m-0">List Team</h3><small><i>Click and drag items to change order</i></small>
+				<h3 class="m-0">List Pengurus DKM</h3><small><i>Click and drag items to change order</i></small>
 			</div>
 			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-team" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> Add Team</a>
+				<a href="<?=$Page_url?>/new-team" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> Add Pengurus DKM</a>
 			</div>
 		</div>
 	</div>
