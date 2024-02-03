@@ -56,7 +56,7 @@
                                 <li>
                                     <a href="<?=control_url($mc['url'])?>">
                                         <?=$icon_page?>
-                                        <span><?=$mc['title']?></span>
+                                        <span style="font-size: 13px;"><?=$mc['title']?></span>
                                     </a>
                                 <?php endif; ?>
                                 </li>

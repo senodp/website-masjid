@@ -35,7 +35,7 @@ class Backend_singlepage extends CI_Model {
 	function prep(){
 		Common_form_init('singlepages');
 
-		Common_form_set('header', 'Header Image', 'image|1349x432');
+		Common_form_set('header', 'Header Image', 'image|1920x1080');
 		Common_form_set_lang('titlehead', 'Title', 'not_required');
 		Common_form_set_lang('content', 'Content', 'required');
 		Common_form_set('is_publish', 'Publish', 'not_required');

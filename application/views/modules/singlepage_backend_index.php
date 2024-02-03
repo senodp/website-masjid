@@ -78,7 +78,7 @@
 						                        <div class="col-md-12">
 						                            <div class="form-group">
 														<!-- <label for="header">Header</label> -->
-														<?=html_upload_img($row['header'],'header','singlepages','1800x440');?>
+														<?=html_upload_img($row['header'],'header','singlepages','1920x1080');?>
 													</div>
 						                        </div>
 						                    </div>
