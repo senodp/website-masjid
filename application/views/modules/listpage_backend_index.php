@@ -15,7 +15,7 @@
 											<img class="align-self-top mr-3" src="<?=imgcache_url(listpage_cover($r), 'attachments', '260x130', 'holder.js/260x130?text='.$Page['title'])?>" alt="thumbnail">
 										<?php else: ?>
 											
-											<img width="150" class="align-self-top mr-3 mt-1 ml-1" src="<?=img_url($r['cover'], 'listpages')?>" alt="thumbnail">
+											<img width="170" class="align-self-top mr-3 mt-1 ml-1" src="<?=img_url($r['cover'], 'listpages')?>" alt="thumbnail">
 											
 										<?php endif; ?>
 											<div class="media-body pt-2">
@@ -23,11 +23,11 @@
 												<!-- <hr class="p-1 m-0"> -->
 												<p class="m-0"><?=str_shorten($r['content'], 275)?>
 												</p>
-												<br>
-												<!-- <i>post created at <?=date_f($r['created_on'], 'd M Y')?></i> -->
-												<p class="font-italic">
-												<a href="<?=$Page_url.'/edit/'.$r['id']?>" class="<?=(in_array('image-gallery', $Page_options))?'':'btn-ajax'?> btn-secondary btn-sm btn"><?=mdi('edit')?> Edit</a>
-												<a href="<?=$Page_url.'/remove/'.$r['id']?>" class="btn-ajax btn-danger btn-sm btn"><?=mdi('delete')?> Remove</a>
+												<!-- <br> -->
+												<i>* post created at <?=date_f($r['created_on'], 'd M Y')?></i>
+												<p class="font-italic pt-2">
+												<a href="<?=$Page_url.'/edit/'.$r['id']?>" class="<?=(in_array('image-gallery', $Page_options))?'':'btn-ajax'?> btn-warning btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
+												<a href="<?=$Page_url.'/remove/'.$r['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
 												</p>
 											</div>
 										</div>
@@ -89,8 +89,8 @@
 							<div class="d-flex w-100 justify-content-between">
 								<h5><?=$tx['name']?></h5>
 								<div class="m-0">
-									<a href="<?=control_url().'/taxonomy/edit/'.$tx['id']?>" class="btn btn-secondary btn-sm btn-ajax"  data-module="taxonomy"><?=mdi('edit')?> Edit</a>
-									<a href="<?=control_url().'/taxonomy/remove/'.$tx['id']?>" class="btn-ajax btn-danger btn-sm btn"  data-module="taxonomy"><?=mdi('delete')?> Remove</a>
+									<a href="<?=control_url().'/taxonomy/edit/'.$tx['id']?>" class="btn btn-secondary btn-sm btn-ajax btn-rounded"  data-module="taxonomy"><?=mdi('edit')?> Edit</a>
+									<a href="<?=control_url().'/taxonomy/remove/'.$tx['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"  data-module="taxonomy"><?=mdi('delete')?> Remove</a>
 								</div>
 							</div>
 						</li>
