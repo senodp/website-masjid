@@ -92,14 +92,16 @@ class Backend_contact extends CI_Model {
 			'contact_address',
 			// 'contact_dua',
 			'contact_phone',
-			'contact_email'
+			'contact_email',
+			'contact_map'
 		];
 
 		$contact_options = [
 			[null, 'not_required'],
 			// [null, 'required'],
 			[null, 'not_required'],
-			[null, 'not_required|valid_email']
+			[null, 'not_required|valid_email'],
+			[null, 'not_required']
 		];
 
 		options_save($contact_names, $contact_options, true);
@@ -129,40 +131,6 @@ class Backend_contact extends CI_Model {
 
 	function _overviewpagecontact(){
 		options_save($this->overviewpagecontact_names, $this->overviewpagecontact_options, true);
-
-		die('success');
-	}
-
-	// ------------------------------------------------------------- //
-
-	function _sosmed(){
-		options_save($this->sosmed_names, $this->sosmed_options, true);
-
-		die('success');
-	}
-	
-	function _edit_sosmed_save(){
-		$sosmed_names = [
-			'sosmed_title',
-			'sosmed_facebook',
-			'sosmed_twitter',
-			'sosmed_linkedin',
-			'sosmed_youtube',
-			'sosmed_instagram',
-			'sosmed_image'
-		];
-
-		$sosmed_options = [
-			[null, 'not_required'],
-			[null, 'not_required|valid_url'],
-			[null, 'not_required|valid_url'],
-			[null, 'not_required|valid_url'],
-			[null, 'not_required|valid_url'],
-			[null, 'not_required|valid_url'],
-			[null, 'image|505x246']
-		];
-
-		options_save($sosmed_names, $sosmed_options, true);
 
 		die('success');
 	}

@@ -1,8 +1,8 @@
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sectioncontact">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-2">Overview Address</h3>
+				<h3 class="mt-0 mb-2">Overview Saran / Masukan</h3>
 				<!-- <h3 class="mt-0 mb-2">Overview Page Contact / Let's Decode!</h3> -->
 				<ul class="nav nav-tabs card-header-tabs">
 					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#sections-eng">English</a></li>
@@ -44,18 +44,25 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<i class="fa fa-phone"></i> <label>Phone</label>
 									<input type="text" class="input-save form-control <?=error_class('contact_phone')?>" name="contact_phone" value="<?=option_value('contact_phone')?>" />
 									<?=error_block('contact_phone')?>
 								</div>
 							</div>
-							<div class="col-md-6">	
+							<div class="col-md-4">	
 								<div class="form-group">
 									<i class="fa fa-envelope"></i> <label>Email</label>
 									<input type="text" class="input-save form-control <?=error_class('contact_email')?>" name="contact_email" value="<?=option_value('contact_email')?>" />
 									<?=error_block('contact_email')?>
+								</div>
+							</div>
+							<div class="col-md-4">	
+								<div class="form-group">
+									<i class="fa fa-map"></i> <label>Location Map</label>
+									<input type="text" class="input-save form-control <?=error_class('contact_map')?>" name="contact_map" value="<?=option_value('contact_map')?>" />
+									<?=error_block('contact_map')?>
 								</div>
 							</div>
 						</div>
@@ -63,74 +70,11 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6">
-		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-sosmed">
-			<div class="card-header text-center">
-				<h3 class="mt-0 mb-0">Social Media</h3>
-			</div>
-			<div class="card-body cards-container pb-4">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="sosmed_image">Logo</label>
-							<?=html_upload_img(option_value('sosmed_image'), 'sosmed_image', 'options', '505x246', 'jpg', 'input-save');?>
-						</div>
-					</div>
-					<div class="col-md-8">
-						<div class="tab-content">
-							<div class="tab-pane active" id="hosos-eng">
-								
-								<!-- <div class="form-group">
-									<label for="sosmed_title">Title</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_title')?>" name="sosmed_title" value="<?=option_value('sosmed_title')?>" />
-									<?=error_block('sosmed_title')?>
-									
-								</div> -->
-								<div class="form-group">
-									<label for="sosmed_facebook">Facebook</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_facebook')?>" name="sosmed_facebook" value="<?=option_value('sosmed_facebook')?>" />
-									<?=error_block('sosmed_facebook')?>
-									
-								</div>
-								<div class="form-group">
-									<label for="sosmed_twitter">Twitter</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_twitter')?>" name="sosmed_twitter" value="<?=option_value('sosmed_twitter')?>" />
-									<?=error_block('sosmed_twitter')?>
-								
-								</div>
-								<div class="form-group">
-									<label for="sosmed_linkedin">Linkedin</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_linkedin')?>" name="sosmed_linkedin" value="<?=option_value('sosmed_linkedin')?>" />
-									<?=error_block('sosmed_linkedin')?>
-									
-								</div>
-								<div class="form-group">
-									<label for="sosmed_youtube">Youtube</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_youtube')?>" name="sosmed_youtube" value="<?=option_value('sosmed_youtube')?>" />
-									<?=error_block('sosmed_youtube')?>
-								
-								</div>
-								<div class="form-group">
-									<label for="sosmed_instagram">Instagram</label>
-									<input type="text" class="input-save form-control <?=error_class('sosmed_instagram')?>" name="sosmed_instagram" value="<?=option_value('sosmed_instagram')?>" />
-									<?=error_block('sosmed_instagram')?>
-								
-								</div>
-								
-							</div>					
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
-			</div>
-		</div>
-	</div>
+	
 </div>
 
 <div class="row">
@@ -140,7 +84,7 @@
 	<div class="col-md-10">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpagecontact">
 			<div class="card-header text-center">
-				<h3 class="mt-0 mb-2">Overview Page Contact / Let's Decode!</h3>
+				<h3 class="mt-0 mb-2">Overview Location Map</h3>
 				<ul class="nav nav-tabs card-header-tabs">
 					<li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#overviewpagecontact-eng">English</a></li>
 					<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#overviewpagecontact-ind">Indonesia</a></li>
@@ -171,7 +115,7 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+				<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 			</div>
 		</div>
 	</div>

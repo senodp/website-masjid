@@ -5,7 +5,7 @@
             <ul class="metismenu" id="side-menu">
                 <li class="menu-title" style="color: #71b6f9;">Navigation</li>
             <?php
-                $icon_page = '<i class="mdi mdi-newspaper"></i>';
+                $icon_page = '<i class="mdi mdi-stop-circle"></i>';
                 $icon_menu = '<i class="mdi mdi-menu"></i>';
             ?>
             <?php foreach ($Menu_parents as $mp): if (is_allowed($mp['url'])): ?>

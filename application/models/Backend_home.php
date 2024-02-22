@@ -45,9 +45,9 @@ class Backend_home extends CI_Model {
 		$testimonial = db_entries('testimonial');
 		$data['testimonial'] = $testimonial;
 
-		$this->db->order_by('sorting', 'asc');
-		$logo = db_entries('logo');
-		$data['logo'] = $logo;
+		// $this->db->order_by('sorting', 'asc');
+		// $logo = db_entries('logo');
+		// $data['logo'] = $logo;
 
 		return $data;
 	}
@@ -493,13 +493,17 @@ class Backend_home extends CI_Model {
 			'contact_address',
 			// 'contact_dua',
 			'contact_phone_title',
-			'contact_phone_number'
+			'contact_phone_number',
+			'contact_phone_title_other',
+			'contact_phone_number_other'
 		];
 
 		$contact_options = [
 			[null, 'not_required'],
 			[null, 'not_required'],
 			// [null, 'required'],
+			[null, 'not_required'],
+			[null, 'not_required'],
 			[null, 'not_required'],
 			[null, 'not_required']
 			// [null, 'not_required|valid_email']

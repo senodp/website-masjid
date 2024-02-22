@@ -556,6 +556,20 @@
 									<?=error_block('contact_phone_number')?>
 								</div>
 							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<i class="fa fa-edit"></i> <label>Title Other</label>
+									<input type="text" class="input-save form-control <?=error_class('contact_phone_title_other')?>" name="contact_phone_title_other" value="<?=option_value('contact_phone_title_other')?>" />
+									<?=error_block('contact_phone_title_other')?>
+								</div>
+							</div>
+							<div class="col-md-6">	
+								<div class="form-group">
+									<i class="fa fa-phone"></i> <label>Phone Other</label>
+									<input type="text" class="input-save form-control <?=error_class('contact_phone_number_other')?>" name="contact_phone_number_other" value="<?=option_value('contact_phone_number_other')?>" />
+									<?=error_block('contact_phone_number_other')?>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
