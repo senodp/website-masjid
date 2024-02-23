@@ -48,10 +48,10 @@
 	<div class="card-header">
 		<div class="row">
 			<div class="col">
-				<h3 class="m-0">List Testimonial</h3><small><i>Click and drag items to change order</i></small>
+				<h3 class="m-0">List Tanggapan Jamaah</h3><small><i>Click and drag items to change order</i></small>
 			</div>
 			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-testimonial" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> Add Testimonial</a>
+				<a href="<?=$Page_url?>/new-testimonial" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> Add Tanggapan</a>
 			</div>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 						<div class="card-header" style="text-align: center; min-height: 70px;">
 							<?php if ( !empty($row['title']) ): ?><h4 class="m-0"><?=$row['title']?></h4><?php endif; ?>
 						</div>
-						<img src="<?=img_url($row['image'], 'testimonial')?>" alt="" class="card-img-top">
+						<img style="border-radius: 50%;" src="<?=img_url($row['image'], 'testimonial')?>" alt="" class="card-img-top">
 						<div class="card-header" style="text-align: center; background-color: #fff;">
 							<?php if ( !empty($row['position']) ): ?><i><?=$row['position']?></i><?php endif; ?>
 						</div>
@@ -73,41 +73,6 @@
 									<a href="<?=$Page_url.'/edit-testimonial/'.$row['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
 								
 									<a href="<?=$Page_url.'/remove-testimonial/'.$row['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</div>
-
-<div class="card cards mt-0">
-	<div class="card-header">
-		<div class="row">
-			<div class="col">
-				<h3 class="m-0">List Logo</h3><small><i>Click and drag items to change order</i></small>
-			</div>
-			<div class="col text-right">
-				<a href="<?=$Page_url?>/new-logo" class="btn-ajax btn-sm btn-dark btn-rounded"><?=mdi('plus')?> New Logo</a>
-			</div>
-		</div>
-	</div>
-	<div class="card-body cards-container">
-		<div class="row is-sortable" data-post-url="<?=$Page_url?>/logo-sorter/">
-			<?php foreach ($logo as $log): ?>
-				<div class="col-md-3 mb-0" data-id="<?=$log['id']?>">
-					<div class="card">
-						<div class="card-header text-center">
-							<?php if ( !empty($log['title']) ): ?><h4 class="m-0"><?=$log['title']?></h4><?php endif; ?>
-						</div>
-						<img src="<?=img_url($log['image'], 'logo')?>" alt="" class="card-img-top">
-						<div class="card-footer">
-							<div class="row m-0">
-								<div class="col p-0 m-0 text-center">
-									<a href="<?=$Page_url.'/edit-logo/'.$log['id']?>" class="btn-ajax btn-dark btn-sm btn-rounded"><?=mdi('edit')?> Edit</a>
-									<a href="<?=$Page_url.'/remove-logo/'.$log['id']?>" class="btn-ajax btn-danger btn-sm btn-rounded"><?=mdi('delete')?> Remove</a>
 								</div>
 							</div>
 						</div>

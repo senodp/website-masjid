@@ -332,7 +332,7 @@
 						<div class="card-header" style="text-align: center; min-height: 70px;">
 							<?php if ( !empty($row['title']) ): ?><h4 class="m-0"><?=$row['title']?></h4><?php endif; ?>
 						</div>
-						<img src="<?=img_url($row['image'], 'testimonial')?>" alt="" class="card-img-top">
+						<img style="border-radius: 50%;" src="<?=img_url($row['image'], 'testimonial')?>" alt="" class="card-img-top">
 						<div class="card-header" style="text-align: center; background-color: #fff;">
 							<?php if ( !empty($row['position']) ): ?><i><?=$row['position']?></i><?php endif; ?>
 						</div>
