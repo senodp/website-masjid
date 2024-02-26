@@ -18,11 +18,11 @@
 								</div>
 							</div>
 
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label for="email">Email</label>
 								<input type="email" class="form-control <?=error_class('email')?>" name="email" value="<?=set_row_value('email',$row)?>" />
 								<?=error_block('email')?>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					

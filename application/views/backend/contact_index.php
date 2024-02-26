@@ -78,10 +78,32 @@
 </div>
 
 <div class="row">
-	<div class="col-md-1">
-		
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<div class="card-header">
+				<div class="row">
+					<div class="col-md-8"><h4 class="m-0 p-0">Pilihan Pesan</h4></div>
+					<div class="col-md-4 text-right"><a href="<?=control_url().'/subject/new/'?>" class="btn btn-dark btn-sm btn-ajax" data-module="subject"><?=mdi('plus')?> New</a></div>
+				</div>
+			</div>
+			<div class="card-body p-0">
+				<ul class="list-group m-0 p-0">
+				<?php foreach (Subjects() as $subject): ?>
+					<li class="list-group-item">
+						<div class="d-flex w-100 justify-content-between">
+							<h5><?=$subject['title']?><br><small><?=$subject['email']?></small></h5>
+							<div class="m-0">
+								<a href="<?=control_url().'/subject/edit/'.$subject['id']?>" class="btn btn-secondary btn-sm btn-ajax" data-module="subject"><?=mdi('edit')?> Edit</a>
+								<a href="<?=control_url().'/subject/remove/'.$subject['id']?>" class="btn-ajax btn-danger btn-sm btn" data-module="subject"><?=mdi('delete')?> Remove</a>
+							</div>
+						</div>
+					</li>
+				<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div class="col-md-10">
+	<div class="col-md-6">
 		<div class="card mt-0 form-save" data-url="<?=$Page_url?>/edit-overviewpagecontact">
 			<div class="card-header text-center">
 				<h3 class="mt-0 mb-2">Overview Location Map</h3>
@@ -119,9 +141,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-1">
-		
-	</div>
 </div>
 
 <div class="row">
@@ -132,7 +151,7 @@
 			    <div class="card-body">
 			    	<div class="row">			
 						<div class="col">
-							<h3 class="m-0">Recipient Email</h3><hr>
+							<h3 class="m-0">Penerima Email</h3><hr>
 						</div>
 						<div class="col text-right">
 							<a href="<?=$Page_url?>/new-vacancy" class="btn-ajax btn-sm btn btn-dark btn-rounded"><?=mdi('plus')?> Add List</a><br>

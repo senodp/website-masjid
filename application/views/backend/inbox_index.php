@@ -24,7 +24,7 @@
 			                    </div>
 			                </div>
 			                <div class="card-footer text-center">
-								<button class="btn btn-block btn-secondary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
+								<button class="btn btn-block btn-primary btn-save btn-rounded btn-sm" tabindex="6"><span class="glyphicon glyphicon-ok"></span> Save Changes</button>
 							</div>
 			            </div>
 			        </div>
@@ -38,7 +38,7 @@
     <div class="card-body">
     	<div class="row">			
 			<div class="col">
-				<h3 class="m-0">Contact List</h3><hr>
+				<h3 class="m-0">Inbox Contact List</h3><hr>
 			</div>
 			<!-- <div class="col text-right">
 				<a href="<?=$Page_url?>/new-location" class="btn-ajax btn-sm btn btn-dark"><?=mdi('plus')?> Add Data</a><br>
@@ -49,13 +49,12 @@
 		    <thead>
 		        <tr>
 					<!-- <th width="5%"><input type="checkbox"  class=" table-checker"></th> -->
-					<th width="15%">Date Sent</th>
-					<!-- <th width="15%">Company</th> -->
-					<th width="20%">Sender</th>
-					<th width="10%">Email</th>
+					<th width="12%">Pesan Terkirim</th>
+					<th width="15%">Kategori / Pilihan</th>
+					<th width="20%">Pengirim</th>
+					<th width="10%">Email Pengirim</th>
 					<!-- <th width="10%">Phone</th> -->
 					<!-- <th width="15%">Subject</th> -->					
-					
 					<!-- <th>Reply Message</th> -->
 				</tr>
 		    </thead>
@@ -64,12 +63,11 @@
 				<tr class="<?=$mail['is_unread']==1?'is-unread':'text-muted'?>">
 					<!-- <td><input type="checkbox" value="<?=$mail['id']?>" name="mails" class=""></td> -->
 					<td><strong><?=date_f($mail['created_on'])?></strong></td>
-					<!-- <td><strong><?=$mail['company']?></strong></td> -->
+					<td><div class="btn btn-primary btn-xs btn-rounded"><a style="color: #fff;" href="<?=$Page_url?>/read/<?=$mail['id']?>"><?=Subjects($mail['subject_id'],'title')?></a></div></td>
 					<td><a href="<?=$Page_url?>/read/<?=$mail['id']?>" class="btn-ajax"><strong><?=$mail['name']?></strong></a></td>
 					<!-- <td><a href="<?=$Page_url?>/read/<?=$mail['id']?>" class="btn-ajax"><strong><?=$mail['last_name']?></strong></a></td> -->
 					<td><a href="javascript:void(0)"><strong><?=$mail['email']?></strong></a></td>
 					<!-- <td><strong><?=$mail['phone']?></strong></td> -->
-					
 				</tr>
 				<?php endforeach; ?>
 		    </tbody>

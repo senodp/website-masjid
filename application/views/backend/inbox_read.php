@@ -1,19 +1,33 @@
 <div class="row">
 	<div class="col-md-12">
-		<p class="text-white bg-secondary border p-2 m-0">
+		
+			<div class="row p-2">
+				<div class="col-md-4">
+					Nama Lengkap <br>
+					Email <br>
+					Subject <br>
+					
+				</div>
+				<div class="col-md-8">
+					: <?=$row['name']?><br> 
+					: <?=$row['email']?><br>
+					: <?=Subjects($row['subject_id'], 'title')?><br>				
+					
+				</div>	
+			</div>
 			<!-- <small class="text-white">From:</small><br> -->
-			Full Name : <?=$row['name']?><br> 
+			<!-- Full Name : <?=$row['name']?><br> 
 			Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?=$row['email']?><br>
-			Subject &nbsp;&nbsp;&nbsp;&nbsp; : <?=$row['title_subject']?><br>			
-		</p>
+			Subject &nbsp;&nbsp;&nbsp;&nbsp; : <?=$row['title_subject']?><br> -->			
+		
 		<!-- <p class="text-white bg-secondary border p-2 m-0">
 			<small>Subject:</small><br>
 			<strong>Pertanyaan :
 			<?=nl2p($row['message'])?></strong>
 		</p> -->
 		<div class="text-white bg-secondary border p-2 m-0">
-			<strong>Question &nbsp; :</strong><br>
-			<?=nl2p($row['message'])?>
+			<strong>Pesan &nbsp; :</strong><br>
+			<?=nl2p(ucfirst($row['message']))?>
 		</div>
 	</div>
 </div>

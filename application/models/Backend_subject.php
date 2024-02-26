@@ -14,7 +14,7 @@ class Backend_subject extends CI_Model {
 	var $fillable = [
 		//[Form Element Name, Form Element Label, Form Validation Rules, Field is Multilanguage]
 		['title', 'Title', 'required'],
-		['email', 'Email', 'required|valid_email']
+		//['email', 'Email', 'required|valid_email']
 	];
 
 	function prep(){
@@ -47,7 +47,7 @@ class Backend_subject extends CI_Model {
 
 	function _index(){
 		$data = array('subtitle' => 'Index');
-
+		
 		$rows = db_entries($this->db_table);
 		$data['rows'] = $rows;
 
