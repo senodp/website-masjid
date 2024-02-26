@@ -2,272 +2,168 @@
 <html lang="en">
 
 <head>
-  <title><?=option_value('meta_title')?></title>
-  <?php if(($this->uri->segment(1) == 'our-showcase' || $this->uri->segment(1) == 'showcase') && $this->uri->segment(2) == 'read'){ ?>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="<?=$entry['title'];?>">
-  <meta name="description" content="<?=$entry['summary'];?>">
-  <meta name="keywords" id="index_keywords" content="<?=$entry['title'];?>">
+    <meta charset="utf-8">
+    <title>Masjid Al Muhajirin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
-  <!-- FACEBOOK OPEN GRAPH -->
-  <meta property="og:url" content="<?=current_url(); ?>">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="<?=$entry['title'];?>">
-  <meta property="og:description" content="<?=$entry['summary'];?>">
-  <meta property="og:image" content="<?=assets_url('frontend')?>/images/sabtacular-image-meta-image.png">
-  <!-- FACEBOOK OPEN GRAPH -->
+    <!-- Favicon -->
+    <link href="<?=assets_url('frontend')?>/img/favicon.png" rel="icon">
 
-  <!-- TWITTER CARD -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@sabtacular">
-  <meta name="twitter:title" content="<?=$entry['title'];?>">
-  <meta name="twitter:description" content="<?=$entry['summary'];?>">
-  <meta name="twitter:image" content="<?=assets_url('frontend')?>/images/sabtacular-image-meta-image.png" />
-  <meta name="twitter:url" content="<?=current_url(); ?>">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <?php }else{ ?>
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="<?=option_value('meta_title')?>">
-  <meta name="description" content="<?=option_value('meta_description')?>">
-  <meta name="keywords" id="index_keywords" content="<?=option_value('meta_keyword')?>">
+    <!-- Libraries Stylesheet -->
+    <link href="<?=assets_url('frontend')?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?=assets_url('frontend')?>/lib/animate/animate.min.css" rel="stylesheet">
 
-  <!-- FACEBOOK OPEN GRAPH -->
-  <meta property="og:url" content="<?=current_url(); ?>">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="<?=option_value('meta_title')?>">
-  <meta property="og:description" content="<?=option_value('meta_description')?>">
-  <meta property="og:image" content="<?=assets_url('frontend')?>/images/sabtacular-image-meta-image.png" />
-  <!-- FACEBOOK OPEN GRAPH -->
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?=assets_url('frontend')?>/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- TWITTER CARD -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@sabtacular">
-  <meta name="twitter:title" content="<?=option_value('meta_title')?>">
-  <meta name="twitter:description" content="<?=option_value('meta_description')?>">
-  <meta name="twitter:image" content="<?=assets_url('frontend')?>/images/sabtacular-image-meta-image.png" />
-  <meta name="twitter:url" content="<?=current_url(); ?>">
-  <?php } ?>
+    <!-- Template Stylesheet -->
+    <link href="<?=assets_url('frontend')?>/css/style.css" rel="stylesheet">
 
-  <!-- FAVICONS -->
-  <link rel="icon" href="<?=assets_url('frontend')?>/images/favicons/favicon.ico">
-  <link rel="apple-touch-icon" href="<?=assets_url('frontend')?>/images/favicons/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?=assets_url('frontend')?>/images/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?=assets_url('frontend')?>/images/favicons/apple-touch-icon-114x114.png">
-
-  <!-- Styles -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap" rel="stylesheet">
-  <link href="<?=assets_url('frontend')?>/fonts/pixeden/pe-icon-7-stroke.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i&display=swap" rel="stylesheet">
-  <link href="<?=assets_url('frontend')?>/css/partical-animation.css" rel="stylesheet">
-  <link href="fonts/material-webfont/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="<?=assets_url('frontend')?>/css/slick.css" rel="stylesheet">
-  <link href="<?=assets_url('frontend')?>/css/slick-theme.css" rel="stylesheet">
-  <link href="<?=assets_url('frontend')?>/css/style.min.css" rel="stylesheet" media="screen">
-
-  <?php if($this->uri->segment(1) == 'our-showcase' && $this->uri->segment(2) == 'read'){ ?>
-  <style type="text/css">
-    body {
-      color: #888888;
-      font-size: 16px;
-    }
-
-    .vertical-centred {
-      font-size: 16px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: #000;
-    }
-
-    blockquote {
-      display: block;
-      margin: auto;
-      padding: 40px;
-      margin-bottom: 40px;
-      background: #000;
-      color: #fff;
-      position: relative;
-    }
-
-    .font-color {
-      font-family: "Poppins", sans-serif;
-      font-size: 4.96rem;
-      font-weight: 300;
-      text-align: center !important;
-      display: unset;
-      width: auto;
-      margin-bottom: 10px;
-    }
-  </style>
-  <?php } ?>
-
-  <!-- Alert Contact -->
-  <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-  crossorigin="anonymous"></script> -->
-
-  <link rel="stylesheet" type="text/css" href="<?=assets_url('frontend')?>/alert/sweetalert.css">
-  <!-- <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugin/dist/sweetalert-dev.js"></script>
-  <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugin/dist/sweetalert.min.js"></script> -->
-  <script type="text/javascript" src="<?=assets_url('frontend')?>/alert/sweetalert2.all.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" async=""></script>
+    <!-- Custom Library -->
+    <link rel="stylesheet" type="text/css" href="<?=assets_url('frontend')?>/alert/sweetalert.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" async=""></script>
 </head>
 
 <body>
-  <div class="animsition">
-    <div class="loader">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-      </div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
     </div>
+    <!-- Spinner End -->
 
-    <!-- Content CLick Capture-->
-
-    <div class="click-capture"></div>
-
-    <!-- HEADER -->
-    <?php $this->load->view('frontend/_header'); ?>
-    <!-- END of HEADER -->
-
-    <header class="navbar navbar-fullpage nav-flex boxed">
-      <div class="navbar-bg"></div>
-      <a class="brand" href="<?=site_url()?>">
-        <img alt="" src="<?=assets_url('frontend')?>/images/logo.png" width="147">
-      </a>
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </header>
-    <!-- <div class="copy-bottom white boxed">© Sabtacular 2023.</div>
-    <div class="social-list social-list-bottom boxed">
-      <a href="" class="icon ion-social-twitter"></a>
-      <a href="" class="icon ion-social-facebook"></a>
-      <a href="" class="icon ion-social-instagram"></a>
-      <a href="" class="icon ion-social-linkedin"></a>
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
     </div> -->
+    <!-- Topbar End -->
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <!-- HEADER -->
+        <?php $this->load->view('frontend/_header'); ?>
+        <!-- END of HEADER -->
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- HEADER -->
+                <?php $this->load->view('frontend/_slider'); ?>
+                <!-- END of HEADER -->
+                
+                <!-- <div class="carousel-item">
+                    <img class="w-100" src="<?=assets_url('frontend')?>/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
+                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button> -->
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
 
     <!-- MAIN VIEW -->
     <?php $this->load->view($view); ?>
     <!-- END of MAIN VIEW -->
+
+    <!-- FOOTER -->
+    <?php $this->load->view('frontend/_footer'); ?>
+    <!-- END of FOOTER -->
     
-  </div>
-  <!-- jQuery -->
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">Copyright &copy; 2024 
+                          <!-- <a class="text-white border-bottom" href="#"> -->
+                          Masjid Al Muhajirin
+                          <!-- </a> -->
+                          - All Rights Reserved. 
+                        </p>            
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
-  <script src="<?=assets_url('frontend')?>/js/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <?php if($this->uri->segment(1) == 'home' || $this->uri->segment(1) == ''){ ?>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-  <?php }else{ ?>
-  <script src="<?=assets_url('frontend')?>/js/wow.min.js"></script>
-  <?php } ?>
-  
-  <script src="<?=assets_url('frontend')?>/js/smoothscroll.js"></script>
-  <script src="<?=assets_url('frontend')?>/js/animsition.js"></script>
-  <script src="<?=assets_url('frontend')?>/js/jquery.validate.min.js"></script>
-  <!-- <script src="<?=assets_url('frontend')?>/js/jquery.magnific-popup.min.js"></script> -->
-  <?php if($this->uri->segment(1) == 'home' || $this->uri->segment(1) == ''){ ?>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?=assets_url('frontend')?>/lib/wow/wow.min.js"></script>
+    <script src="<?=assets_url('frontend')?>/lib/easing/easing.min.js"></script>
+    <script src="<?=assets_url('frontend')?>/lib/waypoints/waypoints.min.js"></script>
+    <script src="<?=assets_url('frontend')?>/lib/counterup/counterup.min.js"></script>
+    <script src="<?=assets_url('frontend')?>/lib/owlcarousel/owl.carousel.min.js"></script>
 
-  <?php }else{ ?>
-  <script src="<?=assets_url('frontend')?>/js/owl.carousel.min.js"></script>
-  <?php } ?>
-  <script src="<?=assets_url('frontend')?>/js/jquery.pagepiling.min.js"></script>
-  <script src="<?=assets_url('frontend')?>/js/particles.min.js"></script>
-  <script src="<?=assets_url('frontend')?>/js/partical-animation.js"></script>
-
-  <?php if($this->uri->segment(1) == 'our-showcase' || $this->uri->segment(1) == 'showcase'){ ?>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <?php } ?>
-  
-  <!-- Scripts -->
-  <?php if($this->uri->segment(1) == 'home' || $this->uri->segment(1) == ''){ ?>
-
-  <?php }else{ ?>
-  <script src="<?=assets_url('frontend')?>/js/slick.min.js"></script>
-  <?php } ?>
-  
-  <script src="<?=assets_url('frontend')?>/js/scripts.js"></script>
-  <script>
-    $(".testimonyhome").slick({
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 997000,
-      infinite: true,
-      centerMode: false,
-      variableWidth: true,
-      swipeToSlide: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      centerPadding: '50px',
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            dots: true,
-            arrows: true,
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            dots: true,
-            arrows: true,
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  </script>
-  <?php if($this->uri->segment(1) == 'our-showcase' || $this->uri->segment(1) == 'showcase'){ ?>
-    <script>
-      $(window).load(function () {
-        var $grid = $('.grid').isotope({
-          // options
-          itemSelector: '.grid-item',
-          // layoutMode: 'fitRows',
-          layoutMode: 'masonry'
-        });
-
-        // change is-checked class on buttons
-        var $buttonGroup = $('.filters');
-        $buttonGroup.on('click', 'li', function (event) {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          var $button = $(event.currentTarget);
-          $button.addClass('is-checked');
-          var filterValue = $button.attr('data-filter');
-          $grid.isotope({ filter: filterValue });
-
-
-          if (isotopeFilter != '*') {
-            var $last = $archive_grid.find(isotopeFilter).last(),
-              $hidden = $archive_grid.find('article').not(isotopeFilter);
-
-            $hidden.insertAfter($last);
-          }
-
-        });
-      });
-    </script>
-  <?php } ?>
+    <!-- Template Javascript -->
+    <script src="<?=assets_url('frontend')?>/js/main.js"></script>
 </body>
 
 </html>

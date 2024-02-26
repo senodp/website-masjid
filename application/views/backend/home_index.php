@@ -602,18 +602,18 @@
 									<?=error_block('sosmed_title')?>
 									
 								</div> -->
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label for="sosmed_facebook">Facebook</label>
 									<input type="text" class="input-save form-control <?=error_class('sosmed_facebook')?>" name="sosmed_facebook" value="<?=option_value('sosmed_facebook')?>" />
 									<?=error_block('sosmed_facebook')?>
 									
-								</div>
-								<div class="form-group">
+								</div> -->
+								<!-- <div class="form-group">
 									<label for="sosmed_twitter">Twitter</label>
 									<input type="text" class="input-save form-control <?=error_class('sosmed_twitter')?>" name="sosmed_twitter" value="<?=option_value('sosmed_twitter')?>" />
 									<?=error_block('sosmed_twitter')?>
 								
-								</div>
+								</div> -->
 								<div class="form-group">
 									<label for="sosmed_youtube">Youtube</label>
 									<input type="text" class="input-save form-control <?=error_class('sosmed_youtube')?>" name="sosmed_youtube" value="<?=option_value('sosmed_youtube')?>" />
