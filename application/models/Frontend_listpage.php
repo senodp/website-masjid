@@ -53,7 +53,7 @@ class Frontend_listpage extends CI_Model {
 		
 		$this->db->order_by('id', 'DESC');
 	
-		if($this->uri->segment(1) == 'showcase' || $this->uri->segment(1) == 'our-showcase'){
+		if($this->uri->segment(1) == 'artikel'){
 			$this->db->where('common_page', 10);
 			$this->db->select('taxonomies.name as title_category');
 			$this->db->join('taxonomies', 'taxonomies.id = listpages.category_id', 'left');
@@ -213,6 +213,12 @@ class Frontend_listpage extends CI_Model {
 		$this->db->join('taxonomies', 'taxonomies.id = listpages.category_id', 'left');
 		$list = module_entries('listpages', PAGE_ID, ['title', 'summary', 'content']);
 		$data['list'] = $list;
+
+		$this->db->order_by('id', 'desc');
+		$this->db->limit(3);
+		$this->db->join('taxonomies', 'taxonomies.id = listpages.category_id', 'left');
+		$list = module_entries('listpages', PAGE_ID, ['title', 'summary', 'content']);
+		$data['list_new'] = $list;
 
 		return $data;
 	}

@@ -70,37 +70,49 @@
         <!-- HEADER -->
         <?php $this->load->view('frontend/_header'); ?>
         <!-- END of HEADER -->
+        <?php if($this->uri->segment(1) == 'home' || $this->uri->segment(1) == ''){ ?>
+            <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-                <!-- HEADER -->
-                <?php $this->load->view('frontend/_slider'); ?>
-                <!-- END of HEADER -->
-                
-                <!-- <div class="carousel-item">
-                    <img class="w-100" src="<?=assets_url('frontend')?>/img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
-                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    <!-- HEADER -->
+                    <?php $this->load->view('frontend/_slider'); ?>
+                    <!-- END of HEADER -->
+                    
+                    <!-- <div class="carousel-item">
+                        <img class="w-100" src="<?=assets_url('frontend')?>/img/carousel-2.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
+                                <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
+                                <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
+                                <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
             </div>
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button> -->
-        </div>
+        <?php }else{ ?>
+            <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+                <div class="row py-5">
+                    <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-4 text-white animated zoomIn">Blog Detail</h1>
+                        <a href="" class="h5 text-white">Home</a>
+                        <i class="fas fa-arrow-circle-right text-white px-2"></i>
+                        <a href="" class="h5 text-white">Blog Detail</a>
+                    </div>
+                </div>
+            </div>
+        <?php } ?> 
     </div>
     <!-- Navbar & Carousel End -->
 

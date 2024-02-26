@@ -526,10 +526,10 @@ if (!function_exists('listpagecase_url')){
 	}
 }
 
-if (!function_exists('listshowcase_url')){
-	function listshowcase_url($row, $page_url){
+if (!function_exists('listartikel_url')){
+	function listartikel_url($row, $page_url){
 		//$url = $page_url.'/read/'.$row['url'];
-		$url = site_url('our-showcase/read/'.$row['url']);
+		$url = site_url('artikel/read/'.$row['url']);
 
 		return $url;
 	}

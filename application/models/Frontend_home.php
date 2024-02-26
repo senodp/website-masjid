@@ -42,12 +42,11 @@ class Frontend_home extends CI_Model {
 		$this->db->order_by('sorting', 'asc');
 		$this->db->select('listpages.*');
 		$this->db->select('taxonomies.*');
-		
 		$this->db->join('listpages', 'featured_showcase.id_listpages = listpages.id', 'left');
 		$this->db->join('taxonomies', 'taxonomies.id = listpages.category_id', 'left');
 		$row = db_entries_fields('featured_showcase', 'featured_showcase.*, listpages.common_page as common_page');
 		//$row = db_entries('featured');
-		$data['list_showcase'] = $row;
+		$data['list_article'] = $row;
 
 		$this->db->where("is_publish", 1);
 		$this->db->order_by('sorting', 'asc');
