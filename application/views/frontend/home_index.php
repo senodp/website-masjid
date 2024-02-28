@@ -279,7 +279,7 @@
                                 <!-- <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small> -->
                                 <small><i class="far fa-calendar-alt text-primary me-2"></i><?=date_f($la['created_on'])?></small>
                             </div>
-                            <h4 class="mb-3"><?=$la['title']?></h4>
+                            <h4 class="mb-3"><a style="color: #091E3E;" href="<?=listartikel_url($la, $Page_url)?>"><?=$la['title']?></a></h4>
                             <p><?=$la['summary']?></p>
                             <a class="text-uppercase" href="<?=listartikel_url($la, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                         </div>

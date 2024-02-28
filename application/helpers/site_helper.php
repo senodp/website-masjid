@@ -6,6 +6,18 @@
 	v.2.5
 */
 
+if (!function_exists('Tanabe_active_menu')){
+	function active_menu($Page, $Menu){
+		$html = '';
+		
+		if ($Page['id'] == $Menu['id'] || $Page['id_parent'] == $Menu['id']){
+			$html = 'active';
+		}
+
+		return $html;
+	}
+}
+
 if (!function_exists('form_set_recaptcha')){
 	function form_set_recaptcha(){
 		if (is_production())
@@ -106,18 +118,6 @@ if (!function_exists('Headhunter_title')){
 		foreach ($trails as $i => $trail){
 			$html .= (count($trails) > 1 && $i == 0)? '' : $trail[0];
 			$html .= (count($trails) > 1 && ($i+1) < count($trails))? '' : '';
-		}
-
-		return $html;
-	}
-}
-
-if (!function_exists('Tanabe_active_menu')){
-	function Tanabe_active_menu($Page, $Menu){
-		$html = '';
-		
-		if ($Page['id'] == $Menu['id'] || $Page['id_parent'] == $Menu['id']){
-			$html = '<span>-</span>';
 		}
 
 		return $html;
