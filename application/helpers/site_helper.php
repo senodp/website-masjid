@@ -124,6 +124,20 @@ if (!function_exists('Headhunter_title')){
 	}
 }
 
+if (!function_exists('Masjid_title')){
+	function Masjid_title(){
+		$trails = Common_crumbs();
+		$html = '';
+
+		foreach ($trails as $i => $trail){
+			$html .= (count($trails) > 1 && $i == 0)? '' : $trail[0];
+			$html .= (count($trails) > 1 && ($i+1) < count($trails))? '' : '';
+		}
+
+		return $html;
+	}
+}
+
 if (!function_exists('Template_class')){
 	function Template_class($Template){
 		$class = $Template; //dd($Template);

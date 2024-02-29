@@ -57,33 +57,35 @@
 	    </div>
 	</section>
 <?php }else{ ?>
-	<section class="summary-team-text">
-        <div class="container customized-container">
-            <div class="align-center-container justify-center-container">
-                <div class="content-page-810">
-                    <div class="breadcrumb bredcrumb-headhunter">
-                        <ol class="breadcrumb breadcrumb-white">
-                            <li class="breadcrumb-item"><a href="<?=site_url();?>">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><?=Headhunter_title()?></li>
-                        </ol>                    
-                    </div> 
-                    <?php if($this->uri->segment(1) == 'sitemap'){ ?>
-                    	<?=option_value('overviewpagesitemap')?>
-                    <?php }else{ ?>
-
-                    <?php } ?>                       
-                    
+	<!-- Pricing Plan Start -->
+    <div class="container-fluid py-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-0">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase"><?=Masjid_title()?></h5>
+                <h1 class="mb-0"><?=$page['titlehead']?></h1>
+            </div>
+            <div class="row g-0">
+                
+                <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                        <!-- <div class="border-bottom py-4 px-5 mb-4">
+                           
+                            <small class="text-uppercase">Tuesday, 19 December 2023</small>
+                        </div> -->
+                        <div class="p-5 pt-4">
+                            <h1 class="display-5 mb-3">
+                                <!-- <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small> -->
+                            </h1>
+                            
+                            <div class="d-flex justify-content-between mb-2"><?=$page['content']?></div>
+                            
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
-    </section>
-	<section class="section-sitemaps">
-        <div class="justify-center-container">
-            <div class="content-page-810">
-				<div class="wrp-of-sitemap">
-					<?=$page['content']?>
-				</div>
-            </div>
-        </div>
-    </section>
+    </div>
+    <!-- Pricing Plan End -->
 <?php } ?>
