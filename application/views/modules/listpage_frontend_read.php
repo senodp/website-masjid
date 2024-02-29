@@ -13,6 +13,7 @@
                     <!-- Blog Detail End -->
     
                     <!-- Comment List Start -->
+                    <?php if (in_array('category', $Page_options)): ?>
                     <div class="mb-4">
                         <div class="section-title section-title-sm position-relative pb-2 mb-3">
                             <h3 class="mb-0">Artikel Lain</h3>
@@ -44,6 +45,7 @@
                         </div>
                         <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
     
                 <!-- Sidebar Start -->

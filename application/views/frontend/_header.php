@@ -32,7 +32,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?=$Menu['title']?></a>
                 <div class="dropdown-menu m-0">
                     <?php foreach ($Menu_children[$Menu['id']] as $Submenu): ?>
-                        <a href="<?=site_url($Submenu['parent_url'].'/'.$Submenu['url'])?>" class="dropdown-item"><?=$Submenu['title']?></a>
+                        <a href="<?=site_url($Submenu['parent_url'].'/'.$Submenu['url'])?>" class="dropdown-item <?=active_menu($Page, $Submenu)?>"><?=$Submenu['title']?></a>
                     <!-- <a href="galeri.html" class="dropdown-item">Galeri</a>
                     <a href="video.html" class="dropdown-item">Video</a> -->
                     <?php endforeach; ?>

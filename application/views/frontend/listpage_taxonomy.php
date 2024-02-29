@@ -13,7 +13,7 @@
                     <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
                         <div class="shadow blog-item bg-light rounded overflow-hidden">
                             <div class="blog-img position-relative overflow-hidden">
-                                <img class="img-fluid" src="<?=imgcache_url($row['cover'], 'listpages', '500x350')?>" alt="">
+                                <a href="<?=listpage_url($row, $Page_url)?>"><img class="img-fluid" src="<?=imgcache_url($row['cover'], 'listpages', '500x350')?>" alt="<?=$row['title']?>"></a>
                                 
                             </div>
                             <div class="p-4">
@@ -23,7 +23,7 @@
                                 </div>
                                 <h4 class="mb-3"><?=$row['title']?></h4>
                                 <p><?=$row['summary']?></p>
-                                <a class="text-uppercase" href="<?=listpage_url($row, $Page_url)?>">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                <a class="text-uppercase" href="<?=listpage_url($row, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
