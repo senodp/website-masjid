@@ -10,7 +10,7 @@
 					</div>	
 					<div class="form-group">
 						<label for="content">Content</label>
-						<textarea class="editor form-control <?=error_class('content')?>" name="content" rows="20" data-height="120"><?=set_row_value('content',$row)?></textarea>
+						<textarea class="form-control <?=error_class('content')?>" name="content" rows="3" data-height="100"><?=set_row_value('content',$row)?></textarea>
 						<?=error_block('content')?>
 					</div>								
 				</div>
@@ -23,7 +23,7 @@
 					</div>	
 					<div class="form-group">
 						<label for="ind_content">Content (Optional)</label>
-						<textarea class="editor form-control <?=error_class('ind_content')?>" name="ind_content" rows="20" data-height="120"><?=set_row_value('ind_content',$row)?></textarea>
+						<textarea class="form-control <?=error_class('ind_content')?>" name="ind_content" rows="3" data-height="100"><?=set_row_value('ind_content',$row)?></textarea>
 						<?=error_block('ind_content')?>
 					</div>								
 				</div>

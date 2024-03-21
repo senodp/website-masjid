@@ -147,7 +147,7 @@ class Backend_home extends CI_Model {
 		Common_form_set_lang('subtitle', 'Sub Title', 'not_required');
 		// Common_form_set('url', 'Button URL (optional)', 'not_required');
 		Common_form_set('link', 'Link', 'not_required');
-		Common_form_set_lang('content', 'Content', 'not_required');
+		Common_form_set_lang('content', 'Content', 'max_length[100]');
 		// Common_form_set('url', 'Button URL (optional)', 'url_title_lowercase');
 		Common_form_set('is_publish', 'Select Status', 'not_required');
 	}

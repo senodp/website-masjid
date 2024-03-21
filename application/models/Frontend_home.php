@@ -55,8 +55,8 @@ class Frontend_home extends CI_Model {
 
 		$this->db->where("is_publish", 1);
 		$this->db->order_by('sorting', 'asc');
-		$logos = db_entries('logo');
-		$data['logo'] = $logos;
+		$programs = db_entries('program');
+		$data['program'] = $programs;
 
 		//$this->db->where("is_active", 1);
 		// $count = db_entries('country', array('title', 'image', 'description_short', 'status'));
