@@ -183,6 +183,17 @@
 
     <!-- Template Javascript -->
     <script src="<?=assets_url('frontend')?>/js/main.js"></script>
+    <?php if($this->uri->segment(1) == 'profile'){ ?>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready(function() {
+        $('#example').DataTable({
+            order: [],
+        });
+    } );
+    </script>
+    <?php } ?>
 </body>
 
 </html>
