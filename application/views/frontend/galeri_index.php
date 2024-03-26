@@ -1,6 +1,10 @@
 <!-- Galeri Start -->
     <div class="container-fluid py-0 wow fadeInUp pb-3" data-wow-delay="0.1s">
         <div class="container py-0">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <!-- <h5 class="fw-bold text-primary text-uppercase">Poster Dakwah</h5> -->
+                <h1 class="mb-0"><?=option_value('overviewpagegaleri_title')?></h1>
+            </div>
             <div class="row g-5">
                 <!-- Galeri list Start -->
                 <div class="col-lg-12">

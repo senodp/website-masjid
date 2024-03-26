@@ -21,11 +21,11 @@
 									<input type="text" class="input-save form-control <?=error_class('overviewpagegaleri_title')?>" name="overviewpagegaleri_title" value="<?=option_value('overviewpagegaleri_title')?>" />
 									<?=error_block('overviewpagegaleri_title')?>
 								</div>
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagegalerion</label> -->
+								<!-- <div class="form-group">
+									
 									<textarea class="input-save form-control <?=error_class('overviewpagegaleri_summary')?>" name="overviewpagegaleri_summary" rows="3" data-height="90"><?=option_value('overviewpagegaleri_summary', null)?>
 									</textarea>
-								</div>
+								</div> -->
 							</div>
 							<div class="tab-pane" id="overviewpagegaleri-ind">
 								<div class="form-group">
@@ -33,11 +33,11 @@
 									<input type="text" class="input-save form-control <?=error_class('ind_overviewpagegaleri_title')?>" name="ind_overviewpagegaleri_title" value="<?=option_value('overviewpagegaleri_title', null, 'ind')?>" />
 									<?=error_block('ind_overviewpagegaleri_title')?>
 								</div>
-								<div class="form-group">
-									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagegaleri</label> -->
+								<!-- <div class="form-group">
+									
 									<textarea class="input-save form-control <?=error_class('ind_overviewpagegaleri_summary')?>" name="ind_overviewpagegaleri_summary" rows="3" data-height="90"><?=option_value('overviewpagegaleri_summary', null, 'ind')?>
 									</textarea>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
