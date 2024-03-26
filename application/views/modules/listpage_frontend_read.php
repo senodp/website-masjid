@@ -9,6 +9,9 @@
                         <h1 class="mb-4"><?=$entry['title'];?></h1>
                         <!-- <img class="img-fluid w-100 rounded mb-5" src="img/blog-1.jpg" alt=""> -->
                         <?=$entry['content'];?>
+                        <p>Bagikan Artikel :</p>
+                        <a href="" class="btn btn-primary"><i class="bi bi-facebook"></i> &nbsp;Facebook</a> 
+                        <a href="" class="btn btn-success"><i class="bi bi-whatsapp"></i> &nbsp;Whatsapp</a>
                     </div>
                     <!-- Blog Detail End -->
     

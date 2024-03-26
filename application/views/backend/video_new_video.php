@@ -16,7 +16,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="form-group">
-								<label for="embed">Embed</label>
+								<label for="embed">Embed</label>&nbsp;<small><i>(recommended  width="360" height="202")</i></small>
 								<textarea class="form-control <?=error_class('embed')?>" name="embed" rows="3" data-height="100"><?=set_row_value('embed',$row)?></textarea>
 								<?=error_block('embed')?>
 							</div>

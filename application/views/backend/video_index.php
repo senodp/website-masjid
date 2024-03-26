@@ -65,7 +65,7 @@
 		            
 		            <!-- <td><?=date_f($new['created_on'], 'd M Y')?></td> -->
 		            <td>
-		                <a href="<?=$Page_url.'/edit-video/'.$new['id']?>" data-toggle="modal" data-target="#newarticle" class="btn-ajax btn-secondary btn-sm btn-rounded"><i data-feather="edit-3" class="small-icon"></i><?=mdi('edit')?> Edit</a>
+		                <a href="<?=$Page_url.'/edit-video/'.$new['id']?>" data-toggle="modal" data-target="#newarticle" class="btn-ajax btn-dark btn-sm btn-rounded"><i data-feather="edit-3" class="small-icon"></i><?=mdi('edit')?> Edit</a>
 		                <a href="<?=$Page_url.'/remove-video/'.$new['id']?>" data-toggle="modal" data-target="#delete_article" class="btn-ajax btn-danger btn-sm btn-rounded"><i data-feather="trash" class="small-icon"></i><?=mdi('delete')?> Remove</a>
 		            </td>
 		        </tr>
