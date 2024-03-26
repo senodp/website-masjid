@@ -210,6 +210,21 @@
     </script>
     <?php } ?>
 
+    <?php if($this->uri->segment(2) == 'poster-dakwah'){ ?>
+    <!-- Template Javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("click",function (e){
+            if(e.target.classList.contains("poster-item")){
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('poster-modal'));
+                myModal.show();
+            }
+        })
+    </script>
+    <?php } ?>
+
 </body>
 
 </html>
