@@ -194,6 +194,22 @@
     } );
     </script>
     <?php } ?>
+
+    <?php if($this->uri->segment(1) == 'galeri'){ ?>
+    <!-- Template Javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("click",function (e){
+            if(e.target.classList.contains("galeri-item")){
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-galeri-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('galeri-modal'));
+                myModal.show();
+            }
+        })
+    </script>
+    <?php } ?>
+
 </body>
 
 </html>

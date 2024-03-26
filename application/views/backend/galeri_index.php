@@ -23,8 +23,7 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagegalerion</label> -->
-									<textarea class="editor input-save form-control <?=error_class('overviewpagegaleri_summary')?>" name="overviewpagegaleri_summary" rows="3" data-height="90">
-										<?=option_value('overviewpagegaleri_summary', null)?>
+									<textarea class="input-save form-control <?=error_class('overviewpagegaleri_summary')?>" name="overviewpagegaleri_summary" rows="3" data-height="90"><?=option_value('overviewpagegaleri_summary', null)?>
 									</textarea>
 								</div>
 							</div>
@@ -36,8 +35,7 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="dewankomisaris_overview_deskripsi">overviewpagegaleri</label> -->
-									<textarea class="editor input-save form-control <?=error_class('ind_overviewpagegaleri_summary')?>" name="ind_overviewpagegaleri_summary" rows="3" data-height="90">
-										<?=option_value('overviewpagegaleri_summary', null, 'ind')?>
+									<textarea class="input-save form-control <?=error_class('ind_overviewpagegaleri_summary')?>" name="ind_overviewpagegaleri_summary" rows="3" data-height="90"><?=option_value('overviewpagegaleri_summary', null, 'ind')?>
 									</textarea>
 								</div>
 							</div>
@@ -71,7 +69,7 @@
 				<div class="col-md-3 mb-0" data-id="<?=$row['id']?>">
 					<div class="card">
 						<div class="card-header" style="text-align: center; min-height: 70px;">
-							<?php if ( !empty($row['title']) ): ?><h4 class="m-0"><?=$row['title']?></h4><?php endif; ?>
+							<?php if (!empty($row['title']) ): ?><h4 class="m-0"><?=ucfirst($row['title'])?></h4><?php endif; ?>
 						</div>
 						<img src="<?=img_thumb_url($row['image'], 'galeri')?>" alt="" class="card-img-top">
 						<!-- <div class="card-header" style="text-align: center; background-color: #fff;">

@@ -259,7 +259,15 @@ if (!function_exists('Mfi_navtitleP')){
 	}
 }
 
-//============================================================================================================
+//============================================================================================================ //
+
+if (!function_exists('galeri_url')){
+	function galeri_url($galeri){
+		$url = site_url('galeri/detail/'.$galeri['url']);
+
+		return $url;
+	}
+}
 
 if (!function_exists('testimonial_url')){
 	function testimonial_url($testimonial){
