@@ -119,7 +119,7 @@
                     <div class="shadow blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="<?=img_thumb_url($la['cover'], 'listpages')?>" alt="<?=$la['title']?>">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="<?=listartikel_url($la, $Page_url)?>"><?=$la['name']?></a>
+                            <a class="position-absolute top-0 start-0 bg-warning text-dark rounded-end mt-5 py-2 px-4" href="<?=listartikel_url($la, $Page_url)?>"><?=$la['name']?></a>
                         </div>
                         <div class="p-4">
                             <div class="d-flex mb-3">
@@ -128,7 +128,7 @@
                             </div>
                             <h4 class="mb-3"><a style="color: #091E3E;" href="<?=listartikel_url($la, $Page_url)?>"><?=$la['title']?></a></h4>
                             <p><?=$la['summary']?></p>
-                            <a class="text-uppercase" href="<?=listartikel_url($la, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                            <a class="btn btn-primary text-uppercase" href="<?=listartikel_url($la, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

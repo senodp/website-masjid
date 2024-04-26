@@ -19,11 +19,11 @@
                             <div class="p-4">
                                 <div class="d-flex mb-3">
                                     
-                                    <small><i class="far fa-calendar-alt text-primary me-2"></i><?=date_f($row['created_on'])?></small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i><b><?=date_f($row['created_on'])?></b></small>
                                 </div>
                                 <h4 class="mb-3"><?=$row['title']?></h4>
                                 <p><?=$row['summary']?></p>
-                                <a class="text-uppercase" href="<?=listpage_url($row, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                                <a class="btn btn-primary text-uppercase" href="<?=listpage_url($row, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

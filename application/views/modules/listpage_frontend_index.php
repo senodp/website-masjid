@@ -11,16 +11,16 @@
                             <div class="shadow blog-item bg-light rounded overflow-hidden">
                                 <div class="blog-img position-relative overflow-hidden">
                                     <a href="<?=listartikel_url($l, $Page_url)?>"><img class="img-fluid" src="<?=img_thumb_url($l['cover'], 'listpages')?>" alt="<?=$l['title']?>"></a>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="<?=listartikel_url($l, $Page_url)?>"><?=$l['title_category']?></a>
+                                    <a class="position-absolute top-0 start-0 bg-warning text-dark rounded-end mt-5 py-2 px-4" href="<?=listartikel_url($l, $Page_url)?>"><?=$l['title_category']?></a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i><?=date_f($l['created_on'])?></small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i><b><?=date_f($l['created_on'])?></b></small>
                                     </div>
                                     <h4 class="mb-3"><a style="color: #091E3E;" href="<?=listartikel_url($l, $Page_url)?>"><?=$l['title']?></a></h4>
                                     <p><?=$l['summary']?></p>
-                                    <a class="text-uppercase" href="<?=listartikel_url($l, $Page_url)?>">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <a class="btn btn-primary text-uppercase" href="<?=listartikel_url($l, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -80,11 +80,11 @@
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i><?=date_f($l['created_on'])?></small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i><b><?=date_f($l['created_on'])?></b></small>
                                     </div>
                                     <h4 class="mb-3"><a style="color: #091E3E;" href="<?=listpage_url($l, $Page_url)?>"><?=$l['title']?></a></h4>
                                     <p><?=$l['summary']?></p>
-                                    <a class="text-uppercase" href="<?=listpage_url($l, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                                    <a class="text-uppercase btn btn-primary" href="<?=listpage_url($l, $Page_url)?>">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
